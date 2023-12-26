@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+h1,
+h2,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  /* height: 15px; */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* TYPWRITER ANIMATION */
+.typewriter {
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation:
+    typing 3.5s steps(23),
+    blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+.line-container {
+  counter-reset: line;
+}
+.line-container p.line::before,
+.line-container div.line::before {
+  color: gray;
+  content: counter(line);
+  counter-increment: line;
+  margin-right: 1rem;
+}
+
+/* FORM INPUT */
+.input {
+  @apply h-12 w-full  bg-articleBg p-2  text-xl focus:border-accentColor focus:outline-none focus:ring-1 focus:ring-accentColor;
+}
+
+/* BLOB ANIMATION */
+
+
+.blob {
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%;
+    background: linear-gradient(to right, #23D5AB, #23A6D5, #E73C7E, #EE7752, #DDD6F3);
+    background-size: 500% 100%;
+    animation: 
+        blobber $time 0s linear infinite,
+        cobler $time 0s linear infinite alternate;
+    
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        bottom: 5px;
+        left: 5px;
+        background-color: #000;
+        background-image: url(https://images.unsplash.com/photo-1495429789562-21d697f29b02?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        mix-blend-mode: multiply;
+        animation:
+            blobber $time 0s ease-in-out infinite,
+            wobbler 15s 0s linear infinite alternate;
+    }
+}
+
+@keyframes blobber {
+    0%  { border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%; }
+    5%  { border-radius: 48% 52% 41% 59% / 66% 37% 63% 34%; }
+    10% { border-radius: 69% 31% 71% 29% / 67% 31% 69% 33%; }
+    15% { border-radius: 60% 40% 71% 29% / 63% 65% 35% 37%; }
+    20% { border-radius: 61% 39% 51% 49% / 57% 58% 42% 43%; }
+    25% { border-radius: 66% 34% 25% 75% / 47% 30% 70% 53%; }
+    30% { border-radius: 32% 68% 38% 62% / 65% 60% 40% 35%; }
+    35% { border-radius: 63% 37% 41% 59% / 35% 38% 62% 65%; }
+    40% { border-radius: 57% 43% 49% 51% / 55% 71% 29% 45%; }
+    45% { border-radius: 47% 53% 34% 66% / 65% 36% 64% 35%; }
+    50% { border-radius: 44% 56% 32% 68% / 69% 26% 74% 31%; }
+    55% { border-radius: 28% 72% 37% 63% / 71% 44% 56% 29%; }    
+    60% { border-radius: 38% 62% 35% 65% / 74% 53% 47% 26%; }
+    65% { border-radius: 73% 27% 46% 54% / 54% 47% 53% 46%; }
+    70% { border-radius: 75% 25% 47% 53% / 49% 53% 47% 51%; }
+    75% { border-radius: 62% 38% 43% 57% / 55% 60% 40% 45%; }
+    80% { border-radius: 41% 59% 65% 35% / 73% 50% 50% 27%; }
+    85% { border-radius: 55% 45% 57% 43% / 73% 61% 39% 27%; }
+    90% { border-radius: 74% 26% 33% 67% / 40% 65% 35% 60%; }
+    95% { border-radius: 58% 42% 57% 43% / 53% 45% 55% 47%; }
+    100%{ border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%; }
+}
+
+@keyframes cobler {
+	0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+@keyframes wobbler {
+    0%  {
+        transform: rotateZ(8deg);
+    }
+    100% {
+        transform: rotateZ(-8deg);
+    }
+}
