@@ -50,12 +50,12 @@ function Explorer() {
           onClick={() => setShow(!show)}
         >
           <ChevronRight style={show ? { transform: "rotate(90deg)" } : {}} />
-          <p htmlFor="portfolio-checkbox" className=" text-lg font-semibold">
+          <p htmlFor="portfolio-checkbox" className="px-1.5 text-lg font-semibold">
             PORTFOLIO
           </p>
         </div>
         {show && (
-          <div className="px-5">
+          <div className="px-6">
             {explorerItems.map((item) => {
               return (
                 <Link

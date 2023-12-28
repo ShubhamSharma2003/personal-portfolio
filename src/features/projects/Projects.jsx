@@ -24,7 +24,8 @@ function projects() {
                 tags={p.tags}
               />
             );
-          })}
+          }
+          )}
         </div>
       </div>
     </HelmetProvider>
