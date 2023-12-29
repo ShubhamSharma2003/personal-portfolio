@@ -28,8 +28,8 @@ const TabsItems = [
     icon: `${js_icon}`,
   },
   {
-    name: "articles.json",
-    path: "/articles",
+    name: "experience.json",
+    path: "/experience",
     icon: `${json_icon}`,
   },
   {

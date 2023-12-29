@@ -21,7 +21,7 @@ const sidebarTopItems = [
   },
   {
     Icon: Pencil,
-    path: "/articles",
+    path: "/experience",
   },
   {
     Icon: Mail,
