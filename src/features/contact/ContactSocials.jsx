@@ -25,7 +25,7 @@ function ContactSocials() {
   ];
   return (
     <div className="line-container flex flex-col">
-      <p className="  text-3xl text-textColor">Reach Out Via Socials </p>
+      <p className="  text-3xl text-white">Reach Out Via Socials </p>
       <div className="flex flex-col space-y-2 pt-5">
         <p className="line text-base text-textColor md:text-2xl">
           .socials &#123;{" "}

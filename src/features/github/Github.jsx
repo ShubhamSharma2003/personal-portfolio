@@ -17,8 +17,8 @@ function Github() {
         <title>Shubham Sharma | Github</title>
       </Helmet>
       <div className="space-y-8 bg-mainBg p-4 md:p-8">
-        <div className="flex h-24 max-w-full items-center justify-center gap-x-5 divide-x-2 divide-accentColor  rounded-lg bg-articleBg">
-          <div className="flex items-center justify-center gap-x-2 divide-x-2  divide-accentColor ">
+        <div className="flex h-24 max-w-full items-center justify-center gap-x-5 divide-x-2 divide-white  rounded-lg bg-articleBg">
+          <div className="flex items-center justify-center gap-x-2 divide-x-2  divide-white ">
             <span>
               <img
                 width={60}
@@ -28,16 +28,16 @@ function Github() {
                 alt=""
               />
             </span>
-            <h2 className="pl-2 text-lg font-medium text-textColor   md:text-2xl">
+            <h2 className="pl-2 text-lg font-medium text-white   md:text-2xl">
               {user.login}
             </h2>
           </div>
           <div className="pl-2">
-            <h2 className=" text-lg  font-medium text-textColor md:text-2xl">
+            <h2 className=" text-lg  font-medium text-white md:text-2xl">
               {user ? user.public_repos : 20} Repos
             </h2>
           </div>
-          <div className="hidden pl-2 text-textColor   md:block ">
+          <div className="hidden pl-2 text-white   md:block ">
             <h2 className="md:text-2xl">
               {user ? user.bio : "I love writing frontend."}
             </h2>

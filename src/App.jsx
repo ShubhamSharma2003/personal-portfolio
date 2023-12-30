@@ -3,6 +3,7 @@ import Home from "./features/home/Home";
 import About from "./features/about/About";
 import Contact from "./features/contact/Contact";
 import Projects from "./features/projects/Projects";
+import Experience from "./features/experience/experience";
 import Github, { loader as GithubLoader } from "./features/github/Github";
 import Settings from "./features/settings/Settings";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/projects",
         element: <Projects />,
+      },
+      {
+        path: "/experience",
+        element: <Experience />,
       },
       {
         path: "/github",
