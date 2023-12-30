@@ -17,8 +17,6 @@ function Experience() {
     setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-
-
   useEffect(() => {
     const timer = setTimeout(() => {
       nextImage();
