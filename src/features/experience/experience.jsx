@@ -20,7 +20,7 @@ function Experience() {
   useEffect(() => {
     const timer = setTimeout(() => {
       nextImage();
-    }, 3000); // Change the delay as per your requirement (here it's set to 3 seconds)
+    }, 3000); // Change the delay as per your requirement 
 
     // Cleanup function to clear the timer when the component unmounts or re-renders
     return () => clearTimeout(timer);
@@ -40,7 +40,7 @@ function Experience() {
         <div className="flex  max-w-xs cursor-pointer flex-col rounded-xl bg-articleBg text-textColor hover:shadow-lg">
         <img src={images[currentImage]} className="h-[180px] rounded-b-xl rounded-t-lg object-cover" alt="Experience" />
       
-          <div className="p-4">
+          <div className="p-3">
             <div className="font-bold text-white text-xl ">NOISE, Gurgaon</div>
             <div className=" text-gray-300 text-sm mb-2">Full Stack Intern - 2mos</div>
      
@@ -76,10 +76,10 @@ function Experience() {
               )}
             </p>
           </div>
-          <div className="px-6 pt-4 pb-2">
-            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+          <div className="px-6 pt-1 pb-2">
+            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">React</span>
+            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Redux</span>
+            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">MySQL</span>
           </div>
         </div>
       </div>
