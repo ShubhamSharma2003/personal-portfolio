@@ -59,7 +59,7 @@ export default {
         scrollbarThumbBg: "#454647",
         articleBg: "#21222c",
       },
-      ayuDark: {
+      shubhDark: {
         mainBg: "#0a0e14",
         bgText: "#101620",
         textColor: "#efefef",
@@ -83,7 +83,7 @@ export default {
         scrollbarThumbBg: "#454647",
         articleBg: "#10121a",
       },
-      ayuMirage: {
+      shubhMirage: {
         mainBg: "#1f2430",
         bgText: "#21242b",
         textColor: "#efefef",

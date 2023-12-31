@@ -4,7 +4,8 @@ import Dracula from "../../assets/images/dracula.png";
 import NightOwl from "../../assets/images/night-owl.png";
 import Github from "../../assets/images/github-dark.png";
 import Nord from "../../assets/images/nord.png";
-import Ayu from "../../assets/images/ayu.png";
+import dark from "../../assets/images/dark-mode.png"; 
+import atom from "../../assets/images/atom.png";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 function Settings() {
@@ -33,8 +34,18 @@ function Settings() {
       theme: "nord",
       img: Nord,
     },
-    { name: "Ayu Mirage", publisher: "teabyii", theme: "ayuMirage", img: Ayu },
-    { name: "Ayu Dark", publisher: "teabyii", theme: "ayuDark", img: Ayu },
+    { 
+      name: "Mirage", 
+      publisher: "shubham", 
+      theme: "shubhMirage", 
+      img: atom 
+    },
+    {
+       name: "Xtra-Dark", 
+      publisher: "shubham", 
+      theme: "shubhDark", 
+      img: dark 
+    },
   ];
 
   return (
@@ -43,7 +54,7 @@ function Settings() {
         <Helmet>
           <title>Shubham Sharma | Settings</title>
         </Helmet>
-        <h2 className="text-3xl font-semibold text-textColor">Manage Themes</h2>
+        <h2 className="text-3xl text-textColor">Manage Themes</h2>
         <div className="grid gap-5 pt-8 md:grid-cols-3 xl:grid-cols-4">
           {themeInfo.map((th) => {
             return (

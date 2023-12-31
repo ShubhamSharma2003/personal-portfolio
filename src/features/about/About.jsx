@@ -39,7 +39,7 @@ function About() {
         <div className="flex flex-col items-center gap-x-10 xl:flex-row">
           <div className=" xl:order-2 px-2">
             <div className="image-container">
-            <a href="https://imgbb.com/"><img src="https://i.ibb.co/6HFGLgQ/Shubham-1.jpg" alt="Shubham-1" border="0"></img></a>
+            <img src="https://i.ibb.co/6HFGLgQ/Shubham-1.jpg" alt="Shubham-1" border="0"></img>
             </div>
           </div>
           <div>
@@ -58,9 +58,9 @@ function About() {
               About me:
             </h2>
             <p className="text-lg font-medium leading-tight text-slate-400 xl:text-xl">
-            Motivated and diligent college student with a strong passion for programming, web development, and design. 
-            Seeking opportunities to contribute to impactful projects and launch a successful career in the tech field. 
-            Dedicated to continuous learning, driving innovation, and staying abreast of industry and technology trends.
+              Motivated and diligent college student with a strong passion for programming, web development, and design. 
+              Seeking opportunities to contribute to impactful projects and launch a successful career in the tech field. 
+              Dedicated to continuous learning, driving innovation, and staying abreast of industry and technology trends.
             </p>
           </div>
           <div className="xl:w-1/2">

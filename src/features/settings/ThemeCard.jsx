@@ -19,7 +19,8 @@ function ThemeCard({ name, publisher, theme, img }) {
         onClick={() => {
           changeTheme(theme);
         }}
-        className=" bg-accentColor px-2 text-lg font-medium"
+        className="pl-1 pr-1 text-lg font-semibold decoration-accentColor 
+               border-2 border-accentColor rounded hover:bg-yellow-500 hover:text-white hover:no-underline hover:border-opacity-50"
       >
         Set Color Theme
       </button>

@@ -20,7 +20,7 @@ function Home() {
             </h2>
             <div className=" typewriter w-max">
               <h2 className="text-xl font-bold text-[#eee] md:text-3xl ">
-                Front End Web Developer
+                Aspiring Software Engineer
               </h2>
             </div>
             <Link to={`${"/projects"}`}>
