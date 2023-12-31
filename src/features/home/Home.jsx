@@ -10,8 +10,9 @@ function Home() {
 
       <div className="relative  flex  min-h-[75svh]  items-center overflow-hidden ">
         <div className="absolute left-10 z-10   gap-y-0 text-[12rem] font-extrabold leading-none text-bgText max-sm:hidden">
-          <h1>I BUILD</h1>
-          <h1>WEBSITES</h1>
+          <h1>CODE</h1>
+          <h1>CREATE</h1>
+          <h1>CONQUER</h1>
         </div>
         <div className="relative z-20 flex flex-col items-center gap-y-10 p-4 md:w-full md:flex-row md:items-center md:justify-between md:px-28">
           <div>
