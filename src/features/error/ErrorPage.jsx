@@ -1,14 +1,23 @@
 import { useTheme } from "../../context/ThemeContext";
+import ErrorImg from "../../assets/images/errorgif.gif"; 
 
 function ErrorPage() {
   const { theme } = useTheme();
 
+  const backgroundImageStyle = {
+    backgroundImage: `url(${ErrorImg})`, 
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+  };
+
   return (
     <div
-      className={` flex h-[100vh] items-center justify-center theme-${theme} bg-mainBg text-textColor`}
+      style={backgroundImageStyle}
+      className={`flex h-[100vh] items-center justify-center theme-${theme} bg-mainBg text-textColor`}
     >
-      <p className=" text-2xl font-bold">
-      Oops! The API's coffee break is running longer than expected. ☕️💤 Check back in an hour when it's caffeinated and ready to code again!
+      <p className="text-4xl font-bold text-center text-white">
+      Oops! The API seems to be taking a nap under the night sky. 🌙💤 Please check back later when it's awake and ready to code!
       </p>
     </div>
   );
