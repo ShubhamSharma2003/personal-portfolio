@@ -6,6 +6,11 @@ import Github from "../../assets/images/github-dark.png";
 import Nord from "../../assets/images/nord.png";
 import dark from "../../assets/images/dark-mode.png"; 
 import atom from "../../assets/images/atom.png";
+import red from "../../assets/images/red.png";
+import twilight from "../../assets/images/twilight.png";
+import darkpro from "../../assets/images/darkpro.png";
+import shades from "../../assets/images/shades.png";
+
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 function Settings() {
@@ -50,13 +55,25 @@ function Settings() {
      name: "Twilight", 
      publisher: "shubham", 
      theme: "twilight", 
-     img: dark 
+     img: twilight 
    },
    {
     name: "Oceanic", 
     publisher: "shubham", 
     theme: "oceanic", 
-    img: dark 
+    img: darkpro 
+  },
+  {
+    name: "Red", 
+    publisher: "shubham", 
+    theme: "pinkishDarkTheme", 
+    img: red 
+  },
+  {
+    name: "Yellow&Pink", 
+    publisher: "shubham", 
+    theme: "customDarkTheme", 
+    img: shades 
   },
   ];
 
