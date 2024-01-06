@@ -41,11 +41,23 @@ function Settings() {
       img: atom 
     },
     {
-       name: "Xtra-Dark", 
+      name: "Xtra-Dark", 
       publisher: "shubham", 
       theme: "shubhDark", 
       img: dark 
     },
+    {
+     name: "Twilight", 
+     publisher: "shubham", 
+     theme: "twilight", 
+     img: dark 
+   },
+   {
+    name: "Oceanic", 
+    publisher: "shubham", 
+    theme: "oceanic", 
+    img: dark 
+  },
   ];
 
   return (
