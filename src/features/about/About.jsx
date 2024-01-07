@@ -42,17 +42,34 @@ function About() {
             <img src="https://i.ibb.co/6HFGLgQ/Shubham-1.jpg" alt="Shubham-1" border="0"></img>
             </div>
           </div>
-          <div>
+          
+          <div >
             <h1 className="text-center text-3xl font-extrabold text-white xl:text-start xl:text-6xl">
               Aspiring <br /> Software Engineer
             </h1>
-            <h2 className="text-xl max-sm:hidden">
+
+            {/* <div class="content">
+              <div class="content__container">
+                <p class="content__container__text">
+                  Hello
+                </p>
+                
+                <ul class="content__container__list">
+                  <li class="content__container__list__item">world!</li>
+                  <li class="content__container__list__item">there!</li>
+                  <li class="content__container__list__item">users!</li>
+                  <li class="content__container__list__item">friends!</li>
+                </ul>
+              </div>
+            </div> */}
+           
+            <h2 className="text-xl max-sm:hidden pt-6">
               Hi, I&apos;m Shubham Sharma. Pre-Final year student & Aspiring Software Developer Engineer.<br />{""}
               based in New Delhi,India. 📍
             </h2>
           </div>
         </div>
-        <div className="xl:flex  xl:gap-x-24 ">
+        <div className="xl:flex  xl:gap-x-24 pt-6">
           <div className="order-1 space-y-4 text-center xl:w-1/2 ">
             <h2 className="text-2xl font-semibold text-accentColor xl:text-3xl">
               About me:
