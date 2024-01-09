@@ -94,16 +94,20 @@ p {
 /* BLOB ANIMATION */
 
 .image-container {
-  display: flex;               /* Use flexbox */
-  align-items: center;         /* Center items vertically */
-  justify-content: center;     /* Center items horizontally */
+  display: flex;               
+  align-items: center;       
+  justify-content: center;     
   position: relative;
-  width: 300px;                /* Adjust based on your design */
-  height: 300px;               /* Adjust based on your design */
+  width: 300px;               
+  height: 300px;             
   overflow: hidden;
-  border-radius: 50%;          /* Makes it circular */
-  border: 2px solid #000;      /* Optional: Adds a border for better visibility */
+  border-radius: 50%;          
+  border: 3px solid #f6f6f6;     
+  transition: transform 0.1s ease, opacity 0.1s ease, background-color 0.1s ease;
+  z-index: 9999;  
+  box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 2px #ffffff, 0 0 50px #bb64f5, 0 0 50px #bb64f5, 0 0 20px #bb64f5, 0 0 30px #bb64f5, 0 0 10px #bb64f5;
 }
+
 
 
 #custom-cursor {

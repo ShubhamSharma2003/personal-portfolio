@@ -38,14 +38,14 @@ function About() {
       <div className=" flex flex-col  items-center justify-center gap-y-4 p-8 text-textColor xl:gap-y-8 ">
         <div className="flex flex-col items-center gap-x-10 xl:flex-row">
           <div className=" xl:order-2 px-2">
-            <div className="image-container">
+            <div className="image-container" >
             <img src="https://i.ibb.co/6HFGLgQ/Shubham-1.jpg" alt="Shubham-1" border="0"></img>
             </div>
           </div>
           
           <div >
             <h1 className="text-center text-3xl font-extrabold text-white xl:text-start xl:text-6xl">
-              Aspiring <br /> Software Engineer
+              Hello there!
             </h1>
 
             {/* <div class="content">
