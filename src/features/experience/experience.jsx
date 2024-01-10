@@ -37,7 +37,7 @@ function Experience() {
             <h1 className="pb-5 text-3xl text-white">My Experiences</h1>
           </div>
         </div>
-        <div className="flex  max-w-xs cursor-pointer flex-col rounded-xl bg-articleBg text-textColor hover:shadow-lg">
+        <div className="flex  max-w-xs cursor-pointer flex-col rounded-xl bg-articleBg text-textColor hover:shadow-lg animate-in fade-in zoom-in delay-150 duration-1000 ">
         <img src={images[currentImage]} className="h-[180px] rounded-b-xl rounded-t-lg object-cover" alt="Experience" />
       
           <div className="p-3">
@@ -51,10 +51,10 @@ function Experience() {
                 <h2 className="font-bold">Resposibilty</h2>
                   <ul className="list-disc pl-5 text-gray-300">
                   <li>Worked collaboratively with the development team on the NoiseFit Project to create an intuitive Watch-Face Component, enhancing the user experience for both customers and administrators.</li>
-                  <li>Precisely Designed the architecture of the WatchFace Component to meet the project's specific requirements to manage over 1500+ watch-face designs data.</li>
+                  <li>Precisely Designed the architecture of the WatchFace Component to meet the project&apos;s specific requirements to manage over 1500+ watch-face designs data.</li>
                   <li>Enhanced the Watch-Face API and incorporated pagination.</li>
-                  <li>Successfully implemented the "Add Watch-Face" functionality, facilitating the addition of watch faces to over 130+ active smart watches.</li>
-                  <li>Contributed to the development of the "Edit Watch-Face" functionality, enabling seamless Watch-Face updates on supported watch models.</li>
+                  <li>Successfully implemented the &apos;Add Watch-Face&apos; functionality, facilitating the addition of watch faces to over 130+ active smart watches.</li>
+                  <li>Contributed to the development of the &apos;Edit Watch-Face&apos; functionality, enabling seamless Watch-Face updates on supported watch models.</li>
                   <li>Engaged in regular code reviews, debugging, and troubleshooting to maintain code quality and resolve issues promptly.</li>
                 </ul>
                 <button          

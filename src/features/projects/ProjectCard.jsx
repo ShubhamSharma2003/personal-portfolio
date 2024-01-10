@@ -3,7 +3,8 @@ import Tag from "./Tag";
 /* eslint-disable react/prop-types */
 function ProjectCard({ img, title, desc, tags, srcCode, demo }) {
   return (
-    <div className="flex  max-w-xs cursor-pointer flex-col rounded-xl bg-articleBg text-textColor hover:shadow-lg">
+    <div className="flex  max-w-xs cursor-pointer flex-col rounded-xl bg-articleBg text-textColor hover:shadow-lg
+    animate-in fade-in zoom-in delay-150 duration-1000 ">
       <img src={img} className=" h-[180px] rounded-b-xl rounded-t-lg" alt="" />
 
       <div className="flex flex-col gap-y-2 p-4">

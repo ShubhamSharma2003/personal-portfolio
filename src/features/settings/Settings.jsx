@@ -84,7 +84,7 @@ function Settings() {
           <title>Shubham Sharma | Settings</title>
         </Helmet>
         <h2 className="text-3xl text-textColor">Manage Themes</h2>
-        <div className="grid gap-5 pt-8 md:grid-cols-3 xl:grid-cols-4">
+        <div className="grid gap-5 pt-8 md:grid-cols-3 xl:grid-cols-4 animate-in fade-in zoom-in delay-150 duration-1000">
           {themeInfo.map((th) => {
             return (
               <ThemeCard

@@ -37,6 +37,7 @@
     "prettier": "^3.0.2",
     "prettier-plugin-tailwindcss": "^0.5.3",
     "tailwindcss": "^3.3.3",
+    "tailwindcss-animate": "^1.0.7",
     "tw-colors": "^2.1.1",
     "vite": "^4.4.5"
   }

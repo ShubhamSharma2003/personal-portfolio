@@ -17,8 +17,8 @@ function Github() {
         <title>Shubham Sharma | Github</title>
       </Helmet>
       <div className="space-y-8 bg-mainBg p-4 md:p-8">
-        <div className="flex h-24 max-w-full items-center justify-center gap-x-5 divide-x-2 divide-white  rounded-lg bg-articleBg">
-          <div className="flex items-center justify-center gap-x-2 divide-x-2  divide-white ">
+        <div className="flex h-24 max-w-full items-center justify-center gap-x-5 divide-x-2 divide-white  rounded-lg bg-articleBg animate-in fade-in zoom-in delay-150 duration-1000">
+          <div className="flex items-center justify-center gap-x-2 divide-x-2 divide-white ">
             <span>
               <img
                 width={60}
@@ -28,22 +28,22 @@ function Github() {
                 alt=""
               />
             </span>
-            <h2 className="pl-2 text-lg font-medium text-white   md:text-2xl">
+            <h2 className="pl-2 text-lg font-medium text-white md:text-2xl">
               {user.login}
             </h2>
           </div>
-          <div className="pl-2">
-            <h2 className=" text-lg  font-medium text-white md:text-2xl">
+          <div className="pl-2 ">
+            <h2 className=" text-lg  font-medium text-accentColor md:text-2xl">
               {user ? user.public_repos : 20} Repos
             </h2>
           </div>
-          <div className="hidden pl-2 text-white   md:block ">
+          <div className="hidden pl-2 text-textColor md:block ">
             <h2 className="md:text-2xl">
               {user ? user.bio : "I love writing frontend."}
             </h2>
           </div>
         </div>
-        <div className="grid gap-x-5 gap-y-5 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-x-5 gap-y-5 md:grid-cols-2 xl:grid-cols-4 animate-in fade-in zoom-in delay-150 duration-1000">
           {repoInfo &&
             repoInfo.map((r) => {
               return (
@@ -57,7 +57,7 @@ function Github() {
               );
             })}
         </div>
-        <div className="h-full w-full  text-textColor">
+        <div className="h-full w-full text-textColor animate-in fade-in zoom-in delay-150 duration-1000">
           <ActivityCalendar
             username="ShubhamSharma2003"
             fontSize={17}

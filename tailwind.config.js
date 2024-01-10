@@ -10,6 +10,7 @@ export default {
     },
   },
   plugins: [
+    require("tailwindcss-animate"),
     createThemes({
       github: {
         mainBg: "#24292e",
