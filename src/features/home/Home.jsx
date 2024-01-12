@@ -11,7 +11,7 @@ function Home() {
       
 
       <div className="relative flex  min-h-[75svh]  items-center overflow-hidden ">
-        <div className="animate-in fade-in zoom-in delay-150 duration-1000 absolute left-10 z-10 gap-y-0 text-[12rem] font-extrabold leading-none text-bgText max-sm:hidden">
+        <div className="animate-in fade-in zoom-in delay-0 duration-1000 absolute left-10 z-10 gap-y-0 text-[12rem] font-extrabold leading-none text-bgText max-sm:hidden">
           <h1>CODE</h1>
           <h1>CREATE</h1>
           <h1>CONQUER</h1>
@@ -19,7 +19,7 @@ function Home() {
         
         <div className="relative z-20 flex flex-col items-center gap-y-10 p-4 md:w-full md:flex-row md:items-center md:justify-between md:px-28">
           <div>
-            <h2 className="animate-in fade-in zoom-in delay-150 duration-1000 text-3xl font-bold text-[#eee] md:text-5xl  xl:text-8xl">
+            <h2 className="animate-in fade-in zoom-in delay-0 duration-1000 text-3xl font-bold text-[#eee] md:text-5xl  xl:text-8xl">
               Shubham Sharma
             </h2>
             <div className=" typewriter w-max">
@@ -28,13 +28,13 @@ function Home() {
               </h2>
             </div>
             <Link to={`${"/projects"}`}>
-              <button className="animate-in fade-in zoom-in delay-150 duration-1000 mt-10 bg-accentColor px-6 py-2.5 font-medium text-white md:px-9 md:text-xl xl:ml-16">
+              <button className="animate-in fade-in zoom-in delay-0 duration-1000 mt-10 bg-accentColor px-6 py-2.5 font-medium text-white md:px-9 md:text-xl xl:ml-16">
                 View Work
               </button>
             </Link>
 
             <Link to={`${"/contact"}`}>
-              <button className="animate-in fade-in zoom-in delay-150 duration-1000 ml-3 border-2 border-accentColor px-5 py-2 text-textColor md:ml-6 md:px-8 md:text-xl">
+              <button className="animate-in fade-in zoom-in delay-0 duration-1000 ml-3 border-2 border-accentColor px-5 py-2 text-textColor md:ml-6 md:px-8 md:text-xl">
                 Contact Me
               </button>
             </Link>

@@ -55,7 +55,7 @@ function Contact() {
           <p className="text-3xl text-white">Or Fill Out This Form</p>
           <form
             ref={formData}
-            className="space-y-4 pt-5 text-textColor animate-in fade-in zoom-in delay-150 duration-1000 "
+            className="space-y-4 pt-5 text-textColor animate-in fade-in zoom-in delay-0 duration-1000 "
             onSubmit={handleSubmit(sendEmail)}
           >
             <div className="flex flex-col  ">

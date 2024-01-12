@@ -17,7 +17,7 @@ function Github() {
         <title>Shubham Sharma | Github</title>
       </Helmet>
       <div className="space-y-8 bg-mainBg p-4 md:p-8">
-        <div className="flex h-24 max-w-full items-center justify-center gap-x-5 divide-x-2 divide-white  rounded-lg bg-articleBg animate-in fade-in zoom-in delay-150 duration-1000">
+        <div className="flex h-24 max-w-full items-center justify-center gap-x-5 divide-x-2 divide-white  rounded-lg bg-articleBg animate-in fade-in zoom-in delay-0 duration-1000">
           <div className="flex items-center justify-center gap-x-2 divide-x-2 divide-white ">
             <span>
               <img
@@ -43,7 +43,7 @@ function Github() {
             </h2>
           </div>
         </div>
-        <div className="grid gap-x-5 gap-y-5 md:grid-cols-2 xl:grid-cols-4 animate-in fade-in zoom-in delay-150 duration-1000">
+        <div className="grid gap-x-5 gap-y-5 md:grid-cols-2 xl:grid-cols-4 animate-in fade-in zoom-in delay-0 duration-1000">
           {repoInfo &&
             repoInfo.map((r) => {
               return (
@@ -57,7 +57,7 @@ function Github() {
               );
             })}
         </div>
-        <div className="h-full w-full text-textColor animate-in fade-in zoom-in delay-150 duration-1000">
+        <div className="h-full w-full text-textColor animate-in fade-in zoom-in delay-0 duration-1000">
           <ActivityCalendar
             username="ShubhamSharma2003"
             fontSize={17}

@@ -37,7 +37,7 @@ function Experience() {
             <h1 className="pb-5 text-3xl text-white">My Experiences</h1>
           </div>
         </div>
-        <div className="flex  max-w-xs cursor-pointer flex-col rounded-xl bg-articleBg text-textColor hover:shadow-lg animate-in fade-in zoom-in delay-150 duration-1000 ">
+        <div className="flex  max-w-xs cursor-pointer flex-col rounded-xl bg-articleBg text-textColor hover:shadow-lg animate-in fade-in zoom-in delay-0 duration-1000 ">
         <img src={images[currentImage]} className="h-[180px] rounded-b-xl rounded-t-lg object-cover" alt="Experience" />
       
           <div className="p-3">

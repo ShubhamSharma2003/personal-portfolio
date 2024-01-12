@@ -2,7 +2,7 @@ import shubham3d from "../../assets/images/developer1.webp";
 
 function Illustration() {
   return (
-    <div className="animate-in fade-in zoom-in delay-150 duration-1000 h-[380px] w-[460px] text-accentColor max-sm:h-[334px] max-sm:w-full rounded-md ">
+    <div className="animate-in fade-in zoom-in delay-0 duration-1000 h-[380px] w-[460px] text-accentColor max-sm:h-[334px] max-sm:w-full rounded-md ">
       <img 
         src={shubham3d}
         alt="Shubham 3D Illustration" 
