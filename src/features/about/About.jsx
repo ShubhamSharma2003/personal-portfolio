@@ -44,7 +44,7 @@ function About() {
           </div>
           
           <div >
-            <h1 className="animate-in fade-in zoom-in delay-150 duration-1000 text-center text-3xl font-extrabold text-white xl:text-start xl:text-6xl">
+            <h1 className="animate-in fade-in zoom-in delay-150 duration-1000 text-center text-3xl font-extrabold text-white xl:text-start xl:text-6xl pt-5">
               Hello there!
             </h1>
 

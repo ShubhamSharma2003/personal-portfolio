@@ -27,22 +27,16 @@ function Home() {
                 Aspiring Software Engineer
               </h2>
             </div>
-            <Link to="/projects" className=" ml-2 relative inline-flex items-center justify-start inline-block mt-6 px-5 py-3 overflow-hidden font-bold rounded-full group">
-              <span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
-              <span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-white opacity-100 group-hover:-translate-x-8"></span>
-              <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">
+            <Link to={`${"/projects"}`}>
+              <button className="animate-in fade-in zoom-in delay-150 duration-1000 mt-10 bg-accentColor px-6 py-2.5 font-medium text-white md:px-9 md:text-xl xl:ml-16">
                 View Work
-              </span>
-              <span className="absolute inset-0 border-2 border-white rounded-full"></span>
+              </button>
             </Link>
 
-            <Link to="/contact" className="ml-3 relative inline-flex items-center justify-start inline-block mt-6 px-5 py-3 overflow-hidden font-bold rounded-full group bg-white text-black">
-              <span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-gray-900 opacity-[3%]"></span>
-              <span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-black opacity-100 group-hover:-translate-x-8"></span>
-              <span className="relative w-full text-left text-black transition-colors duration-200 ease-in-out group-hover:text-white">
+            <Link to={`${"/contact"}`}>
+              <button className="animate-in fade-in zoom-in delay-150 duration-1000 ml-3 border-2 border-accentColor px-5 py-2 text-textColor md:ml-6 md:px-8 md:text-xl">
                 Contact Me
-              </span>
-              <span className="absolute inset-0 border-2 border-white rounded-full"></span>
+              </button>
             </Link>
           </div>
           
