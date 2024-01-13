@@ -28,16 +28,27 @@ function Home() {
               </h2>
             </div>
             <Link to={`${"/projects"}`}>
-              <button className="animate-in fade-in zoom-in delay-0 duration-1000 mt-10 bg-accentColor px-6 py-2.5 font-medium text-white md:px-9 md:text-xl xl:ml-16">
+              <button className="animate-in fade-in zoom-in delay-0 duration-1000 mt-10 bg-accentColor px-6 py-2.5 font-medium text-white md:px-3 md:text-xl xl:ml-10">
                 View Work
               </button>
             </Link>
 
             <Link to={`${"/contact"}`}>
-              <button className="animate-in fade-in zoom-in delay-0 duration-1000 ml-3 border-2 border-accentColor px-5 py-2 text-textColor md:ml-6 md:px-8 md:text-xl">
+              <button className="animate-in fade-in zoom-in delay-0 duration-1000 ml-3 border-2 border-accentColor px-5 py-2 text-textColor md:ml-6 md:px-3 md:text-xl">
                 Contact Me
               </button>
             </Link>
+
+            <a 
+              href="https://drive.google.com/file/d/1K9MwE4B2UHPexSTxujBoK9JEjuwcTEfB/view?usp=drive_link" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <button className="animate-in fade-in zoom-in delay-0 duration-1000 ml-3 bg-accentColor px-5 py-2.5 font-medium text-white md:ml-6 md:px-3 md:text-xl xl:ml-6">
+                View Resume
+              </button>
+            </a>
+
           </div>
           
           <Illustration />
