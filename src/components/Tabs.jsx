@@ -37,6 +37,11 @@ const TabsItems = [
     path: "/github",
     icon: `${markdown_icon}`,
   },
+  {
+    name: "certification.cpp",
+    path: "/certification",
+    icon: `${json_icon}`,
+  },
 ];
 function Tabs() {
   const location = useLocation();

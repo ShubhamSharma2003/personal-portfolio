@@ -4,6 +4,7 @@ import About from "./features/about/About";
 import Contact from "./features/contact/Contact";
 import Projects from "./features/projects/Projects";
 import Experience from "./features/experience/experience";
+import Certification from "./features/certification/certification";
 import Github, { loader as GithubLoader } from "./features/github/Github";
 import Settings from "./features/settings/Settings";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "/settings",
         element: <Settings />,
+      },
+      {
+        path: "/certification",
+        element: <Certification />,
       },
     ],
   },

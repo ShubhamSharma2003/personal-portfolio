@@ -38,6 +38,11 @@ const explorerItems = [
     path: "/github",
     icon: `${markdown_icon}`,
   },
+  {
+    name: "certification.cpp",
+    path: "/certification",
+    icon: `${markdown_icon}`,
+  },
 ];
 function Explorer() {
   const [show, setShow] = useState(true);
