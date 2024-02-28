@@ -3,6 +3,7 @@ import html_icon from "../assets/icons/html_icon.svg";
 import css_icon from "../assets/icons/css_icon.svg";
 import js_icon from "../assets/icons/js_icon.svg";
 import json_icon from "../assets/icons/json_icon.svg";
+import certi from "../assets/icons/certi.svg";
 import markdown_icon from "../assets/icons/markdown_icon.svg";
 import { Link, useLocation } from "react-router-dom";
 
@@ -40,7 +41,7 @@ const TabsItems = [
   {
     name: "certification.cpp",
     path: "/certification",
-    icon: `${json_icon}`,
+    icon: `${certi}`,
   },
 ];
 function Tabs() {

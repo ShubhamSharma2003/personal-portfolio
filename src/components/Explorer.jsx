@@ -7,6 +7,7 @@ import js_icon from "../assets/icons/js_icon.svg";
 import json_icon from "../assets/icons/json_icon.svg";
 import markdown_icon from "../assets/icons/markdown_icon.svg";
 import { Link } from "react-router-dom";
+import certi from "../assets/icons/certi.svg";
 const explorerItems = [
   {
     name: "home.jsx",
@@ -41,7 +42,7 @@ const explorerItems = [
   {
     name: "certification.cpp",
     path: "/certification",
-    icon: `${markdown_icon}`,
+    icon: `${certi}`,
   },
 ];
 function Explorer() {

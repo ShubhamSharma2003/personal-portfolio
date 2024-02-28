@@ -7,17 +7,7 @@ import CheckIcon from './icons/CheckIcon';
 import ReactIcon from './icons/ReactIcon';
 
 function Footer() {
-  const [currentTime, setCurrentTime] = useState(new Date());
-
-  useEffect(() => {
-    // Update the current time every second
-    const interval = setInterval(() => {
-      setCurrentTime(new Date());
-    }, 1000);
-
-    // Clear the interval on component unmount
-    return () => clearInterval(interval);
-  }, []);
+  
 
   return (
     <div className="flex h-8 justify-between  bg-bottombarBg px-4 text-lg text-textColor max-sm:text-sm">
@@ -43,7 +33,7 @@ function Footer() {
           <BellIcon />
         </div>
         {/* Display current date and time */}
-        <div>{currentTime.toLocaleString()}</div>
+        
       </div>
     </div>
   );
