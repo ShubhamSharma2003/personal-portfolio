@@ -40,7 +40,7 @@ function Home() {
             </Link>
 
             <a 
-              href="https://drive.google.com/file/d/1K9MwE4B2UHPexSTxujBoK9JEjuwcTEfB/view?usp=drive_link" 
+              href="https://drive.google.com/file/d/1qNY4aTzix_g87K6uSJ2WCbC8taOpUcsJ/view?usp=sharing" 
               target="_blank" 
               rel="noopener noreferrer"
             >

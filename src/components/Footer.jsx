@@ -27,6 +27,7 @@ function Footer() {
       </div>
 
       <div className="flex items-center gap-x-3">
+        <p>Made with love ❤️</p>
         <ReactIcon />
         <CheckIcon />
         <div className=" cursor-pointer hover:bg-bottombarHoverBg">
