@@ -13,7 +13,8 @@ export const project = [
     image: AlgoVisual,
     tags: ["JavaScript", "Html", "CSS"],
     sourceCode: "https://github.com/ShubhamSharma2003/Ai-Article-Summarizer",
-    demo: "https://aisummarizerbyshubham.netlify.app/",
+    demo: "https://algovisualizerbyshubham.netlify.app/",
+    
   },
   {
     title: "IntelliSummar",
@@ -22,7 +23,7 @@ export const project = [
     image: intellisummar,
     tags: ["JavaScript", "TailwindCSS", "Redux-Toolkit"],
     sourceCode: "https://github.com/ShubhamSharma2003/Algorithm-Visualizer",
-    demo: "https://algovisualizerbyshubham.netlify.app",
+    demo: "https://aisummarizerbyshubham.netlify.app/",
   },
   {
     title: "LinkSaver",
