@@ -7,11 +7,11 @@ import Experience from "./features/experience/experience";
 import Certification from "./features/certification/certification";
 import Github, { loader as GithubLoader } from "./features/github/Github";
 import Settings from "./features/settings/Settings";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, HashRouter, createHashRouter } from "react-router-dom";
 import { ThemeProvider } from "./context/ThemeContext";
 import ErrorPage from "./features/error/ErrorPage";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     element: <Main />,
     errorElement: <ErrorPage />,
