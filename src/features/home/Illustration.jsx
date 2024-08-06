@@ -1,4 +1,4 @@
-import shubham3d from "../../assets/images/developer1.webp";
+import shubham3d from "../../assets/images/gifdev.gif";
 
 function Illustration() {
   return (
@@ -7,7 +7,7 @@ function Illustration() {
         src={shubham3d}
         alt="Shubham 3D Illustration" 
         className="w-full h-full object-cover rounded-md" 
-        style={{ filter: 'drop-shadow(0 0 10px rgba(216, 247, 0, 0.5))' }} // Add this inline style for the glow effect
+        style={{ filter: 'drop-shadow(0 0 20px rgba(255, 140, 140, 0.51))' }} // Add this inline style for the glow effect
       />
     </div>
   );
