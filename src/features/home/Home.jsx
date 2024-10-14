@@ -39,7 +39,7 @@ function Home() {
             </Link>
 
             <a
-              href="https://drive.google.com/file/d/163Z6Ko8UF58e5tNMvjcsXhVkbidP4B5h/view?usp=sharing"
+              href="https://drive.google.com/file/d/1gxKPQQUiZj5IK58VTDIiJDXJ1j7tZZnO/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
             >
