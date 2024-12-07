@@ -12,6 +12,8 @@ import mongodb from "../../assets/icons/mongodb.svg";
 import nodejs from "../../assets/icons/nodejs.svg";
 import postman from "../../assets/icons/postman.svg";
 import mysql from "../../assets/icons/mysql2.svg";
+import WordRotate from "../../components/ui/word-rotate"
+
 
 function About() {
   const techStack = [
@@ -37,16 +39,24 @@ function About() {
       </Helmet>
       <div className=" flex flex-col  items-center justify-center gap-y-4 p-8 text-textColor xl:gap-y-8 ">
         <div className="flex flex-col items-center gap-x-10 xl:flex-row">
-          <div className="animate-in fade-in zoom-in delay-0 duration-1000 xl:order-2 px-2">
-            <div className="image-container" >
-            <img src="https://i.ibb.co/6HFGLgQ/Shubham-1.jpg" alt="Shubham-1" border="0"></img>
+          <div className="px-2 delay-0 duration-1000 animate-in fade-in zoom-in xl:order-2">
+            <div className="image-container">
+              <img
+                src="https://i.ibb.co/6HFGLgQ/Shubham-1.jpg"
+                alt="Shubham-1"
+                border="0"
+              ></img>
             </div>
           </div>
-          
-          <div >
-            <h1 className="animate-in fade-in zoom-in delay-0 duration-1000 text-center text-3xl font-extrabold text-white xl:text-start xl:text-6xl pt-5">
-              Hello there!
-            </h1>
+
+          <div>
+            <div className="pt-5 text-center text-3xl font-extrabold text-white xl:text-start xl:text-6xl">
+              Hello
+              <WordRotate
+                className="delay-0 duration-1000 fade-in zoom-in"
+                words={["there!", "World!", "User!", "Friend!"]}
+              />
+            </div>
 
             {/* <div class="content">
               <div class="content__container">
@@ -62,41 +72,46 @@ function About() {
                 </ul>
               </div>
             </div> */}
-           
-            <h2 className=" animate-in fade-in zoom-in delay-0 duration-1000 text-xl max-sm:hidden pt-6">
-              Hi, I&apos;m Shubham Sharma. Pre-Final year student & Aspiring Software Developer Engineer.<br />{""}
+
+            <h2 className=" pt-6 text-xl delay-0 duration-1000 animate-in fade-in zoom-in max-sm:hidden">
+              Hi, I&apos;m Shubham Sharma. Pre-Final year student & Aspiring
+              Software Developer Engineer.
+              <br />
+              {""}
               based in New Delhi,India. 📍
             </h2>
           </div>
         </div>
-        <div className="xl:flex  xl:gap-x-24 pt-6">
+        <div className="pt-6  xl:flex xl:gap-x-24">
           <div className="order-1 space-y-4 text-center xl:w-1/2 ">
-            <h2 className=" animate-in fade-in zoom-in delay-0 duration-1000 text-2xl font-semibold text-accentColor xl:text-3xl">
+            <h2 className=" text-2xl font-semibold text-accentColor delay-0 duration-1000 animate-in fade-in zoom-in xl:text-3xl">
               About me:
             </h2>
-            <p className=" animate-in fade-in zoom-in delay-0 duration-1000 text-lg font-medium leading-tight text-slate-400 xl:text-xl">
-              Motivated and diligent college student with a strong passion for programming, web development, and design. 
-              Seeking opportunities to contribute to impactful projects and launch a successful career in the tech field. 
-              Dedicated to continuous learning, driving innovation, and staying abreast of industry and technology trends.
+            <p className=" text-lg font-medium leading-tight text-slate-400 delay-0 duration-1000 animate-in fade-in zoom-in xl:text-xl">
+              Motivated and diligent college student with a strong passion for
+              programming, web development, and design. Seeking opportunities to
+              contribute to impactful projects and launch a successful career in
+              the tech field. Dedicated to continuous learning, driving
+              innovation, and staying abreast of industry and technology trends.
             </p>
           </div>
           <div className="xl:w-1/2">
-          <h3 className=" animate-in fade-in zoom-in delay-0 duration-1000 my-4 text-center text-lg font-semibold text-accentColor underline-offset-4 xl:text-3xl">
-            Tech Stack
-          </h3>
-          <div className="flex flex-wrap justify-center gap-5">
-            {techStack.map((item, i) => {
-              return (
-                <img
-                  className="animate-in fade-in zoom-in delay-0 duration-1000 h-14 w-14 cursor-pointer rounded-full p-2 shadow-md shadow-accentColor mb-4"
-                  key={i}
-                  src={item}
-                  alt="tech-stack"
-                />
-              );
-            })}
+            <h3 className=" my-4 text-center text-lg font-semibold text-accentColor underline-offset-4 delay-0 duration-1000 animate-in fade-in zoom-in xl:text-3xl">
+              Tech Stack
+            </h3>
+            <div className="flex flex-wrap justify-center gap-5">
+              {techStack.map((item, i) => {
+                return (
+                  <img
+                    className="mb-4 h-16 w-16 transform cursor-pointer rounded-full bg-transparent p-2 transition-transform duration-300 ease-in-out hover:scale-110"
+                    key={i}
+                    src={item}
+                    alt="tech-stack"
+                  />
+                );
+              })}
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </HelmetProvider>
