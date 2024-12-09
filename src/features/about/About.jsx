@@ -13,6 +13,7 @@ import nodejs from "../../assets/icons/nodejs.svg";
 import postman from "../../assets/icons/postman.svg";
 import mysql from "../../assets/icons/mysql2.svg";
 import WordRotate from "../../components/ui/word-rotate"
+import profilepic from "../../assets/images/Profilepic.jpeg"
 
 
 function About() {
@@ -42,7 +43,8 @@ function About() {
           <div className="px-2 delay-0 duration-1000 animate-in fade-in zoom-in xl:order-2">
             <div className="image-container">
               <img
-                src="https://i.ibb.co/6HFGLgQ/Shubham-1.jpg"
+                src = {profilepic}
+                // src="https://i.ibb.co/tMwXr3S/Whats-App-Image-2024-12-09-at-20-18-11.png"
                 alt="Shubham-1"
                 border="0"
               ></img>
@@ -74,11 +76,11 @@ function About() {
             </div> */}
 
             <h2 className=" pt-6 text-xl delay-0 duration-1000 animate-in fade-in zoom-in max-sm:hidden">
-              Hi, I&apos;m Shubham Sharma. Pre-Final year student & Aspiring
+              Hi, I&apos;m Shubham Sharma. Final year student & Aspiring
               Software Developer Engineer.
               <br />
               {""}
-              based in New Delhi,India. 📍
+              based in New Delhi,India.📍
             </h2>
           </div>
         </div>

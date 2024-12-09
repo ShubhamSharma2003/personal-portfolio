@@ -1,4 +1,5 @@
 /** @tye {import('tailwindcss').Config} */
+
 const { createThemes } = require("tw-colors");
 export default {
     darkMode: ["class"],

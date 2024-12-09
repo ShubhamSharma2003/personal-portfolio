@@ -91,20 +91,27 @@ p {
 }
 
 /* BLOB ANIMATION */
-
 .image-container {
   display: flex;               
   align-items: center;       
   justify-content: center;     
   position: relative;
-  width: 300px;               
+  width: 300px;               /* Circle boundary size */
   height: 300px;             
-  overflow: hidden;
+  overflow: hidden;           /* Ensures image stays within the circle */
   border-radius: 50%;          
   border: 3px solid #f6f6f6;     
   transition: transform 0.1s ease, opacity 0.1s ease, background-color 0.1s ease;
   z-index: 9999;  
-  box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 2px #ffffff, 0 0 50px #bb64f5, 0 0 50px #bb64f5, 0 0 20px #bb64f5, 0 0 30px #bb64f5, 0 0 10px #bb64f5;
+  box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 2px #ffffff, 
+              0 0 50px #bb64f5, 0 0 50px #bb64f5, 
+              0 0 20px #bb64f5, 0 0 30px #bb64f5, 0 0 10px #bb64f5;
+}
+
+.image-container img {
+  width: 120%;                /* Increase size beyond container bounds */
+  height: 120%;               /* Keep aspect ratio intact */
+  object-fit: cover;          /* Ensures the image fits nicely within the circle */
 }
 
 
