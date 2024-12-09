@@ -63,7 +63,8 @@ export default {
   		},
   		animation: {
   			gradient: 'gradient 8s linear infinite',
-  			rainbow: 'rainbow var(--speed, 2s) infinite linear'
+  			rainbow: 'rainbow var(--speed, 2s) infinite linear',
+  			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear'
   		},
   		keyframes: {
   			gradient: {
@@ -77,6 +78,11 @@ export default {
   				},
   				'100%': {
   					'background-position': '200%'
+  				}
+  			},
+  			'border-beam': {
+  				'100%': {
+  					'offset-distance': '100%'
   				}
   			}
   		}
