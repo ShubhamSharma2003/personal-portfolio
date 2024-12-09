@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Illustration from "./Illustration";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import SparklesText from "../../components/ui/sparkles-text";
+import BLurIn from "../../components/ui/blur-in";
 
 
 function Home() {

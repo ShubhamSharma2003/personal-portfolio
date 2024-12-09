@@ -3,6 +3,7 @@ import ContactSocials from "./ContactSocials";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+import HyperText from "../../components/ui/hyper-text";
 
 function Contact() {
   const form = useForm({
@@ -52,7 +53,10 @@ function Contact() {
           <ContactSocials />
         </div>
         <div className="flex flex-col xl:w-1/2  xl:pl-10">
-          <p className="text-3xl text-white">Or Fill Out This Form</p>
+        <HyperText
+        className="text-3xl text-white"
+        text="Or Fill Out this form"
+      />
           <form
             ref={formData}
             className="space-y-4 pt-5 text-textColor animate-in fade-in zoom-in delay-0 duration-1000 "
