@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import Illustration from "./Illustration";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import SparklesText from "../../components/ui/sparkles-text";
-import BLurIn from "../../components/ui/blur-in";
-
+import BlurIn from "../../components/ui/blur-in";
+import Meteors from "../../components/ui/meteors"; // Import Meteors for comet effect
 
 function Home() {
   return (
@@ -13,6 +13,10 @@ function Home() {
       </Helmet>
 
       <div className="relative flex min-h-[75svh] items-center overflow-hidden ">
+        
+        {/* Meteors Component for comet effect */}
+        <Meteors number={30} />
+
         <div className="animate-in fade-in zoom-in delay-0 duration-1000 absolute left-10 z-10 gap-y-0 text-[12rem] font-extrabold leading-none text-bgText max-sm:hidden">
           <h1>CODE</h1>
           <h1>CREATE</h1>
@@ -22,7 +26,7 @@ function Home() {
         <div className="relative z-20 flex flex-col items-center gap-y-10 p-4 md:w-full md:flex-row md:items-center md:justify-between md:px-28">
           <div>
             <h2 className="animate-in fade-in zoom-in delay-0 duration-1000 text-3xl font-bold text-[#eee] md:text-5xl xl:text-8xl">
-            <SparklesText text="Shubham Sharma" />
+              <SparklesText text="Shubham Sharma" />
             </h2>
             <div className="typewriter w-max">
               <h2 className="text-xl font-bold text-[#eee] md:text-3xl ">
