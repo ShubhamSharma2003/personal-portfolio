@@ -12,6 +12,9 @@ import mongodb from "../../assets/icons/mongodb.svg";
 import nodejs from "../../assets/icons/nodejs.svg";
 import postman from "../../assets/icons/postman.svg";
 import mysql from "../../assets/icons/mysql2.svg";
+import tensorflow_icon from "../../assets/icons/tensorflow.svg";
+import figma from "../../assets/icons/figma.svg";
+import github from "../../assets/icons/github.svg";
 import WordRotate from "../../components/ui/word-rotate"
 import profilepic from "../../assets/images/Profilepic.jpeg"
 
@@ -31,6 +34,9 @@ function About() {
     cpp,
     java,
     python_icon,
+    tensorflow_icon,
+    figma,
+    github
   ];
 
   return (
