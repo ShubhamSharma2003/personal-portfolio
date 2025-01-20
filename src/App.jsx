@@ -6,6 +6,7 @@ import Projects from "./features/projects/Projects";
 import Experience from "./features/experience/experience";
 import Certification from "./features/certification/certification";
 import Github, { loader as GithubLoader } from "./features/github/Github";
+import LeetCodeStats from "./features/leetcode/LeetCodeStats";
 import Settings from "./features/settings/Settings";
 import { RouterProvider, HashRouter, createHashRouter } from "react-router-dom";
 import { ThemeProvider } from "./context/ThemeContext";
@@ -48,6 +49,10 @@ const router = createHashRouter([
       {
         path: "/certification",
         element: <Certification />,
+      },
+      {
+        path: "/leetcode",
+        element: <LeetCodeStats />,
       },
     ],
   },

@@ -5,6 +5,7 @@ import Pencil from "./icons/Pencil";
 import Mail from "./icons/MailIcon";
 import Account from "./icons/AccountIcon";
 import Settings from "./icons/SettingsIcon";
+import CertificateIcon from "./icons/CertificateIcon";
 import { Link, useLocation } from "react-router-dom";
 const sidebarTopItems = [
   {
@@ -27,6 +28,10 @@ const sidebarTopItems = [
     Icon: Mail,
     path: "/contact",
   },
+  {
+    Icon: CertificateIcon,
+    path: "/certification",
+  },
 ];
 const sidebarBottomItems = [
   {
@@ -37,6 +42,7 @@ const sidebarBottomItems = [
     Icon: Settings,
     path: "/settings",
   },
+  
 ];
 function SideBar() {
   const location = useLocation();

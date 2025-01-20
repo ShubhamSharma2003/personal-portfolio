@@ -4,6 +4,7 @@ import css_icon from "../assets/icons/css_icon.svg";
 import js_icon from "../assets/icons/js_icon.svg";
 import json_icon from "../assets/icons/json_icon.svg";
 import certi from "../assets/icons/certi.svg";
+import leetcode from "../assets/icons/leetcode.svg"
 import markdown_icon from "../assets/icons/markdown_icon.svg";
 import { Link, useLocation } from "react-router-dom";
 
@@ -39,9 +40,14 @@ const TabsItems = [
     icon: `${markdown_icon}`,
   },
   {
-    name: "certification.cpp",
+    name: "certification.png",
     path: "/certification",
     icon: `${certi}`,
+  },
+  {
+    name: "leetcode.cpp",
+    path: "/leetcode",
+    icon: `${leetcode}`,
   },
 ];
 function Tabs() {
