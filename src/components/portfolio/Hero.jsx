@@ -39,11 +39,11 @@ export default function Hero() {
             </div>
 
             {/* Name */}
-            <h1 className="section-heading text-[clamp(3rem,9vw,6.5rem)] mb-1 leading-[0.92]">
+            <h1 className="section-heading text-[clamp(1.5rem,8.5vw,6.5rem)] mb-1 leading-[0.92]">
               SHUBHAM
             </h1>
             <div className="relative inline-block mb-4">
-              <h1 className="section-heading text-[clamp(3rem,9vw,6.5rem)] relative z-10 px-2 leading-[0.92]">
+              <h1 className="section-heading text-[clamp(1.5rem,8.5vw,6.5rem)] relative z-10 px-2 leading-[0.92]">
                 SHARMA
               </h1>
               <div className="absolute inset-y-0 left-0 right-0 bg-yellow border-b-4 border-ink -z-0 -skew-x-1 top-1" />
