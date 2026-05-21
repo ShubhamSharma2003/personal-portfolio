@@ -1,4 +1,4 @@
-import profilePic from '../../assets/images/Profilepic.jpeg'
+import profilePic from '../../assets/images/shubham-new.jpg'
 
 const TICKER_ITEMS = [
   'React.js', 'Next.js', 'Node.js', 'TypeScript', 'Python',
