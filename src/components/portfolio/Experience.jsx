@@ -77,13 +77,13 @@ const EXPERIENCES = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 bg-cream border-b-2 border-ink">
+    <section id="experience" className="py-16 md:py-24 bg-cream border-b-2 border-ink">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-14">
+        <div className="mb-8 md:mb-14">
           <span className="section-label">003 — Experience</span>
         </div>
 
-        <h2 className="section-heading text-5xl md:text-6xl lg:text-7xl mb-16">
+        <h2 className="section-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-10 md:mb-16">
           WHERE I'VE
           <br />
           <span className="relative inline-block">
@@ -99,30 +99,32 @@ export default function Experience() {
               className="border-2 border-ink shadow-brutal-xl overflow-hidden card-hover"
             >
               {/* Card header */}
-              <div className={`${exp.headerBg} border-b-2 border-ink p-6 flex flex-wrap items-start justify-between gap-4`}>
-                <div>
-                  <div className="flex items-center gap-3 mb-2 flex-wrap">
-                    <h3 className="font-syne font-black text-2xl md:text-3xl text-ink uppercase tracking-tight">
-                      {exp.company}
-                    </h3>
-                    <span
-                      className={`${exp.badgeBg} font-mono text-[10px] border-2 border-ink text-ink px-2 py-0.5 uppercase tracking-widest`}
-                    >
-                      {exp.badge}
-                    </span>
+              <div className={`${exp.headerBg} border-b-2 border-ink p-4 md:p-6`}>
+                <div className="flex flex-wrap items-start justify-between gap-2 md:gap-4">
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 md:gap-3 mb-1.5 flex-wrap">
+                      <h3 className="font-syne font-black text-xl sm:text-2xl md:text-3xl text-ink uppercase tracking-tight">
+                        {exp.company}
+                      </h3>
+                      <span
+                        className={`${exp.badgeBg} font-mono text-[10px] border-2 border-ink text-ink px-2 py-0.5 uppercase tracking-widest shrink-0`}
+                      >
+                        {exp.badge}
+                      </span>
+                    </div>
+                    <p className="font-grotesk font-semibold text-ink/80 text-sm">{exp.role}</p>
+                    <p className="font-mono text-[11px] text-ink/50 mt-0.5">{exp.companyFull}</p>
                   </div>
-                  <p className="font-grotesk font-semibold text-ink/80 text-sm">{exp.role}</p>
-                  <p className="font-mono text-[11px] text-ink/50 mt-0.5">{exp.companyFull}</p>
-                </div>
-                <div className="text-right">
-                  <p className="font-mono text-sm font-bold text-ink">{exp.period}</p>
-                  <p className="font-mono text-xs text-ink/60 mt-1">{exp.location}</p>
+                  <div className="text-right shrink-0">
+                    <p className="font-mono text-xs sm:text-sm font-bold text-ink">{exp.period}</p>
+                    <p className="font-mono text-[11px] text-ink/60 mt-1">{exp.location}</p>
+                  </div>
                 </div>
               </div>
 
               {/* Card body */}
-              <div className="bg-cream p-6">
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+              <div className="bg-cream p-4 md:p-6">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 mb-4 md:mb-6">
                   {exp.highlights.map((h, j) => (
                     <div key={j} className="border border-ink/20 p-3 hover:border-ink transition-colors duration-150">
                       <p className="font-grotesk font-bold text-xs text-ink uppercase tracking-wide mb-1.5 flex items-center gap-2">
@@ -133,7 +135,7 @@ export default function Experience() {
                     </div>
                   ))}
                 </div>
-                <div className="pt-4 border-t border-ink/10 flex flex-wrap gap-2">
+                <div className="pt-3 md:pt-4 border-t border-ink/10 flex flex-wrap gap-2">
                   {exp.tags.map((tag) => (
                     <span key={tag} className="skill-tag !text-[10px] !py-1">
                       {tag}

@@ -84,14 +84,14 @@ const PROJECTS = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 bg-cream border-b-2 border-ink">
+    <section id="projects" className="py-16 md:py-24 bg-cream border-b-2 border-ink">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-14">
+        <div className="mb-8 md:mb-14">
           <span className="section-label">004 — Projects</span>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-4 items-start mb-12">
-          <h2 className="section-heading text-5xl md:text-6xl lg:text-7xl">
+        <div className="grid lg:grid-cols-2 gap-4 items-start mb-8 md:mb-12">
+          <h2 className="section-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
             SELECTED
             <br />
             <span className="relative inline-block">
@@ -99,7 +99,7 @@ export default function Projects() {
               <span className="absolute left-0 right-0 bottom-0 h-4 bg-blue -z-10" />
             </span>
           </h2>
-          <div className="flex items-end">
+          <div className="hidden sm:flex items-end">
             <p className="font-mono text-xs text-ink/40 uppercase tracking-widest leading-relaxed">
               From AI/ML research to freelance production work.
               <br />
@@ -111,22 +111,22 @@ export default function Projects() {
         {/* First project — wide featured card */}
         <div className="mb-4">
           <div className="border-2 border-ink shadow-brutal-xl card-hover flex flex-col sm:flex-row overflow-hidden group">
-            <div className={`${PROJECTS[0].accent} border-r-2 border-ink p-8 sm:w-16 flex sm:flex-col items-center justify-between sm:justify-start gap-4`}>
-              <span className="font-syne font-black text-4xl text-ink/20 rotate-0 sm:-rotate-90 sm:writing-mode-vertical">
+            <div className={`${PROJECTS[0].accent} border-b-2 sm:border-b-0 sm:border-r-2 border-ink p-4 sm:p-8 sm:w-16 flex sm:flex-col items-center justify-between sm:justify-start gap-4`}>
+              <span className="font-syne font-black text-4xl text-ink/20">
                 {PROJECTS[0].num}
               </span>
               <span className="font-mono text-[10px] border-2 border-ink bg-ink text-cream px-2 py-0.5 uppercase tracking-wider whitespace-nowrap">
                 {PROJECTS[0].label}
               </span>
             </div>
-            <div className="flex-1 p-8">
-              <h3 className="font-syne font-black text-2xl md:text-3xl uppercase mb-4 leading-tight">
+            <div className="flex-1 p-5 sm:p-8">
+              <h3 className="font-syne font-black text-xl sm:text-2xl md:text-3xl uppercase mb-3 md:mb-4 leading-tight">
                 {PROJECTS[0].title}
               </h3>
-              <p className="font-grotesk text-sm text-ink/70 leading-relaxed mb-6 max-w-2xl">
+              <p className="font-grotesk text-sm text-ink/70 leading-relaxed mb-4 md:mb-6 max-w-2xl">
                 {PROJECTS[0].description}
               </p>
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-2 mb-4 md:mb-6">
                 {PROJECTS[0].tech.map((t) => (
                   <span key={t} className="skill-tag !text-[11px]">{t}</span>
                 ))}

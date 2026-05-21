@@ -61,16 +61,16 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-cream border-b-2 border-ink">
+    <section id="contact" className="py-16 md:py-24 bg-cream border-b-2 border-ink">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-14">
+        <div className="mb-8 md:mb-14">
           <span className="section-label">006 — Contact</span>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* LEFT */}
           <div>
-            <h2 className="section-heading text-5xl md:text-6xl lg:text-7xl mb-8">
+            <h2 className="section-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 md:mb-8">
               LET'S
               <br />
               <span className="relative inline-block">
@@ -125,7 +125,7 @@ export default function Contact() {
 
           {/* RIGHT — Form */}
           <div className="border-2 border-ink shadow-brutal-xl bg-cream">
-            <div className="border-b-2 border-ink px-8 py-5 bg-yellow flex items-center justify-between">
+            <div className="border-b-2 border-ink px-5 sm:px-8 py-4 sm:py-5 bg-yellow flex items-center justify-between">
               <h3 className="font-syne font-black text-lg uppercase tracking-tight">
                 Send a Message
               </h3>
@@ -136,8 +136,8 @@ export default function Contact() {
               )}
             </div>
 
-            <form ref={formRef} onSubmit={handleSubmit} className="p-8 space-y-5">
-              <div className="grid sm:grid-cols-2 gap-4">
+            <form ref={formRef} onSubmit={handleSubmit} className="p-5 sm:p-8 space-y-4 sm:space-y-5">
+              <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="font-mono text-[10px] uppercase tracking-widest text-ink/50 block mb-1.5">
                     Name *

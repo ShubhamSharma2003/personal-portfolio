@@ -1,17 +1,17 @@
 export default function Publications() {
   return (
-    <section id="publications" className="py-24 bg-yellow border-y-2 border-ink">
+    <section id="publications" className="py-16 md:py-24 bg-yellow border-y-2 border-ink">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-14">
+        <div className="mb-8 md:mb-14">
           <span className="font-mono text-xs uppercase tracking-[0.3em] border-2 border-ink bg-ink text-cream px-3 py-1 inline-block">
             005 — Publications
           </span>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center">
           {/* Left */}
           <div>
-            <h2 className="section-heading text-5xl md:text-6xl lg:text-7xl text-ink mb-6">
+            <h2 className="section-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-ink mb-5 md:mb-6">
               RESEARCH
               <br />
               PUBLISHED
@@ -34,7 +34,7 @@ export default function Publications() {
           </div>
 
           {/* Right — Paper card */}
-          <div className="border-2 border-ink bg-cream shadow-brutal-xl p-8">
+          <div className="border-2 border-ink bg-cream shadow-brutal-xl p-5 sm:p-8">
             <div className="flex items-start gap-4 mb-6">
               <span className="font-syne font-black text-6xl text-ink/10 leading-none select-none">¶</span>
               <div>
