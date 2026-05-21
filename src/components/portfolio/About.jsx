@@ -14,16 +14,16 @@ const CERTS = [
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-cream border-b-2 border-ink">
+    <section id="about" className="py-16 md:py-24 bg-cream border-b-2 border-ink">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-14">
+        <div className="mb-8 md:mb-14">
           <span className="section-label">001 — About</span>
         </div>
 
-        <div className="grid lg:grid-cols-[1fr_400px] gap-16 items-start">
+        <div className="grid lg:grid-cols-[1fr_400px] gap-10 lg:gap-16 items-start">
           {/* Left: bio */}
           <div>
-            <h2 className="section-heading text-5xl md:text-6xl lg:text-7xl mb-10">
+            <h2 className="section-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-7 md:mb-10">
               WHO
               <br />
               <span className="relative inline-block">
@@ -54,7 +54,7 @@ export default function About() {
             </div>
 
             {/* Contact links */}
-            <div className="mt-10 flex flex-wrap gap-3">
+            <div className="mt-7 md:mt-10 flex flex-wrap gap-3">
               <a href="mailto:shubham8186@gmail.com" className="btn-brutal !text-xs !py-2">
                 shubham8186@gmail.com
               </a>
@@ -69,7 +69,7 @@ export default function About() {
             </div>
 
             {/* Certs */}
-            <div className="mt-10 pt-8 border-t-2 border-ink">
+            <div className="mt-7 md:mt-10 pt-6 md:pt-8 border-t-2 border-ink">
               <p className="font-mono text-xs uppercase tracking-widest text-ink/40 mb-4">
                 Certifications & Recognition
               </p>

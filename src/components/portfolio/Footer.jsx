@@ -20,10 +20,10 @@ export default function Footer() {
     <footer className="bg-ink text-cream border-t-2 border-ink">
       {/* Top strip */}
       <div className="border-b border-cream/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
             {/* Brand */}
-            <div className="lg:col-span-2">
+            <div className="col-span-2 lg:col-span-2">
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-12 h-12 bg-yellow border-2 border-cream flex items-center justify-center shadow-brutal-yellow">
                   <span className="font-syne font-black text-ink text-xl">SS</span>

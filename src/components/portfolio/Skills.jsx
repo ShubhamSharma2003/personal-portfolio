@@ -27,16 +27,16 @@ const SKILL_GROUPS = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 bg-ink text-cream border-b-2 border-ink">
+    <section id="skills" className="py-16 md:py-24 bg-ink text-cream border-b-2 border-ink">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-14">
+        <div className="mb-8 md:mb-14">
           <span className="font-mono text-xs uppercase tracking-[0.3em] border-2 border-cream bg-cream text-ink px-3 py-1 inline-block">
             002 — Skills
           </span>
         </div>
 
-        <div className="grid lg:grid-cols-[1fr_auto] gap-12 items-start mb-16">
-          <h2 className="section-heading text-5xl md:text-6xl lg:text-7xl text-cream">
+        <div className="grid lg:grid-cols-[1fr_auto] gap-6 md:gap-12 items-start mb-10 md:mb-16">
+          <h2 className="section-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-cream">
             TECH
             <br />
             <span className="text-yellow">ARSENAL</span>
@@ -50,17 +50,17 @@ export default function Skills() {
           </div>
         </div>
 
-        <div className="space-y-10">
+        <div className="space-y-8 md:space-y-10">
           {SKILL_GROUPS.map((group) => (
             <div key={group.category}>
-              <div className="flex items-center gap-4 mb-5">
+              <div className="flex items-center gap-4 mb-4 md:mb-5">
                 <span className={`font-mono text-xs uppercase tracking-[0.25em] ${group.color} font-bold`}>
                   {group.category}
                 </span>
                 <div className="flex-1 h-px bg-cream/10" />
                 <span className="font-mono text-xs text-cream/20">{group.items.length}</span>
               </div>
-              <div className="flex flex-wrap gap-2.5">
+              <div className="flex flex-wrap gap-2">
                 {group.items.map((skill) => (
                   <span
                     key={skill}
