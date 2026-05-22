@@ -101,7 +101,7 @@ const PROJECTS = [
       { label: 'CMS / DB', color: 'bg-blue', items: ['Sanity CMS', 'MongoDB'] },
       { label: 'SEO', color: 'bg-yellow', items: ['JSON-LD', 'Structured Data', 'OG Tags'] },
     ],
-    links: { code: 'https://github.com/shubhamsharma2003' },
+    links: { live: 'https://www.uniselrealty.com', code: 'https://github.com/shubhamsharma2003' },
     accent: 'bg-green',
     featured: false,
     stat: '100% SEO indexable',
