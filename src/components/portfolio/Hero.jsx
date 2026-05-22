@@ -69,8 +69,8 @@ export default function Hero() {
 
             {/* Bio */}
             <p className="font-grotesk text-sm sm:text-base text-ink/75 max-w-[500px] mb-8 sm:mb-10 leading-relaxed">
-              I engineer AI systems that <strong className="text-ink">replace manual operations</strong> and ship production software at startup speed. At{' '}
-              <strong className="text-ink">NOISE</strong>, I own problems end-to-end — from agentic B2B automation processing thousands of purchase orders, to intelligent HR pipelines, brand intelligence tools, and AI-driven customer automation.
+              At <strong className="text-ink">NOISE</strong>, I joined as an intern and converted to SDE1 by shipping AI systems that{' '}
+              <strong className="text-ink">replaced entire manual workflows</strong> — B2B warehouse PO automation across Amazon, Flipkart & LFR (Croma, Reliance, Tresor), an AI HR pipeline, brand intelligence monitor, and a 24/7 Instagram AI agent. I own the problem end-to-end: architecture, backend, frontend, deployment.
             </p>
 
             {/* CTAs */}

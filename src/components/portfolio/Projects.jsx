@@ -4,12 +4,12 @@ const PROJECTS = [
     title: 'Warehouse Management Automation',
     label: 'NOISE · SDE1',
     description:
-      'Agentic AI system that ingests Purchase Orders from Amazon, Flipkart, LFR, Reliance, Chroma, Blinkit & Myntra — via email pickup or manual upload. Every SKU is validated live against the OMS, through multi-stage checks and flows, then auto-punched into the system. Eliminated manual intervention for 4–5 people, reduced processing time from hours to minutes, and saved ~90% of total effort.',
+      'Agentic AI system that ingests Purchase Orders from Amazon, Flipkart, and LFR (Large Format Retail: Croma, Reliance, Tresor & more) — via automated email pickup or manual upload. Every SKU is validated live against the OMS through multi-stage checks, then auto-punched into the system. Eliminated manual intervention for 4–5 people, reduced processing time from hours to minutes, and saved ~90% of total effort.',
     flow: ['Email / Upload', '→', 'AI Parser', '→', 'OMS Validation', '→', 'Auto-Punch'],
     techGroups: [
       { label: 'AI Layer', color: 'bg-yellow', items: ['Agentic AI', 'N8N', 'LLM', 'OCR Pipeline'] },
       { label: 'Backend', color: 'bg-pink', items: ['Node.js', 'Python', 'FastAPI'] },
-      { label: 'Integrations', color: 'bg-blue', items: ['OMS API', 'Email Webhook', 'Amazon', 'Flipkart'] },
+      { label: 'Integrations', color: 'bg-blue', items: ['OMS API', 'Email Webhook', 'Amazon', 'Flipkart', 'LFR'] },
       { label: 'Frontend', color: 'bg-green', items: ['Next.js', 'TypeScript'] },
     ],
     links: {},
@@ -217,7 +217,7 @@ export default function Projects() {
               </div>
 
               <div className="flex flex-wrap gap-3 text-xs font-mono text-ink/40 uppercase tracking-widest border-t border-ink/10 pt-4">
-                <span>B2B · Amazon · Flipkart · LFR · Reliance · Chroma · Blinkit · Myntra</span>
+                <span>B2B · Amazon · Flipkart · LFR (Croma · Reliance · Tresor) · Blinkit · Myntra</span>
               </div>
             </div>
           </div>
