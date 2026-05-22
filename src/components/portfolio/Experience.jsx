@@ -1,7 +1,7 @@
 const EXPERIENCES = [
   {
     company: 'NOISE',
-    companyFull: 'boAt Lifestyle / NOISE',
+    companyFull: 'NOISE · Gurugram',
     role: 'Software Developer Engineer 1',
     period: 'Aug 2025 — Present',
     location: 'Gurugram, Haryana',
@@ -51,7 +51,7 @@ const EXPERIENCES = [
   },
   {
     company: 'NOISE',
-    companyFull: 'boAt Lifestyle / NOISE',
+    companyFull: 'NOISE · Gurugram',
     role: 'Full-Stack Intern → SDE1',
     period: 'Feb 2025 — Jul 2025',
     location: 'Gurugram, Haryana',
