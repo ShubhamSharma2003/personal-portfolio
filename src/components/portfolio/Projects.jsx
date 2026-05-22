@@ -183,7 +183,7 @@ export default function Projects() {
               <span className="absolute left-0 right-0 bottom-0 h-4 bg-blue -z-10" />
             </span>
           </h2>
-          <div className="hidden sm:flex items-end">
+          <div className="hidden lg:flex items-end pb-2">
             <p className="font-mono text-xs text-ink/40 uppercase tracking-widest leading-relaxed">
               Production systems built at NOISE.
               <br />
