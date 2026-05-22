@@ -42,13 +42,13 @@ export default function About() {
 
             <div className="space-y-5 text-ink/75 font-grotesk text-[15px] leading-relaxed max-w-xl">
               <p>
-                I'm an <strong className="text-ink">AI-first software engineer</strong> who takes ownership of hard problems and ships production systems that create real business impact. At <strong className="text-ink">NOISE</strong>, I've designed and delivered 5+ AI-driven platforms entirely from scratch — not prototypes, not demos, but live systems handling real operations at scale.
+                I'm an <strong className="text-ink">AI-first software engineer</strong> at <strong className="text-ink">NOISE</strong> (boAt Lifestyle) — where I joined as an intern and was converted to SDE1 after shipping production systems that replaced entire manual workflows. Since joining full-time, I've designed and owned 5+ AI-driven platforms end-to-end: a B2B warehouse automation pipeline processing POs from Amazon, Flipkart, Croma, Reliance & more; an AI recruitment system that cuts weeks of screening to hours; a real-time brand intelligence monitor across 5 social platforms; and an Instagram AI agent running 24/7 with zero human support.
               </p>
               <p>
-                My work sits at the intersection of <strong className="text-ink">AI engineering</strong>, <strong className="text-ink">full-stack development</strong>, and <strong className="text-ink">systems thinking</strong>. I design agentic workflows, integrate LLMs into business-critical processes, build the APIs, ship the UI, and measure the outcome. I think in pipelines, not features.
+                My work spans <strong className="text-ink">AI engineering</strong>, <strong className="text-ink">full-stack development</strong>, and <strong className="text-ink">systems design</strong>. I don't just integrate LLMs — I architect the entire pipeline: agentic N8N workflows, RAG systems, OCR parsers, sentiment engines, the Node/Python backend, the Next.js frontend, and the CI/CD that ships it all. I think in systems, not tickets.
               </p>
               <p>
-                I thrive in <strong className="text-ink">high-velocity startup environments</strong> where requirements are ambiguous and the pressure is real. Whether it's inheriting a messy codebase at 11pm or architecting a new AI system from a napkin sketch — I move fast, learn faster, and never stop until it's in production.
+                I thrive when the problem is ambiguous and the pressure is high. Startup pace isn't a tradeoff for me — it's how I operate best. Whether it's inheriting a messy codebase at 11pm or designing a new AI system from a napkin sketch, I move fast, learn faster, and don't stop until it's live and working.
               </p>
             </div>
 

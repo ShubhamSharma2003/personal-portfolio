@@ -14,7 +14,7 @@ const EXPERIENCES = [
         tag: 'AI SYSTEM',
         tagColor: 'bg-yellow',
         title: 'Warehouse Management Automation',
-        desc: 'Architected end-to-end agentic AI pipeline ingesting B2B purchase orders from Amazon, Flipkart, LFR, Reliance, Chroma, Blinkit & Myntra. Multi-stage OMS validation, auto-SKU punch-in. Replaced 4–5 manual roles. Processing time: hours → minutes. 90% effort saved.',
+        desc: 'Architected end-to-end agentic AI pipeline ingesting B2B purchase orders from Amazon, Flipkart, and LFR (Large Format Retail: Croma, Reliance, Tresor & more). Multi-stage OMS validation, auto-SKU punch-in. Replaced 4–5 manual roles. Processing time: hours → minutes. 90% effort saved.',
       },
       {
         tag: 'AI SYSTEM',

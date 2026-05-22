@@ -52,7 +52,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="https://drive.google.com/drive/folders/1dIlJxGAQVrG-UeABBTNnLFONMtSzV-JR"
+              href="https://drive.google.com/file/d/1YJio0i5RYM7U52EWH-A0JTqDIWjMVXbN/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-brutal ml-3 !py-2 !text-xs"
@@ -100,7 +100,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://drive.google.com/drive/folders/1dIlJxGAQVrG-UeABBTNnLFONMtSzV-JR"
+            href="https://drive.google.com/file/d/1YJio0i5RYM7U52EWH-A0JTqDIWjMVXbN/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="block font-mono text-sm uppercase tracking-widest px-6 py-4 bg-ink text-cream hover:bg-yellow hover:text-ink transition-colors duration-150"
