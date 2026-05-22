@@ -73,6 +73,24 @@ const PROJECTS = [
   },
   {
     num: '05',
+    title: 'WhatsApp AI Agent Dashboard',
+    label: 'Freelance · Real Estate',
+    description:
+      'Full-stack conversational AI CRM built for a real estate company. Centralizes all WhatsApp conversations across clients in one dashboard, with an AI agent that reads each lead\'s context, analyzes the scenario, and responds intelligently. Timeline-based nudge engine auto-follows up cold leads at the right moment. Broadcast messaging to segment audiences with one click. Fully configurable AI persona and response rules per business unit.',
+    flow: ['WhatsApp Msg', '→', 'Meta Webhook', '→', 'AI Agent (OpenAI)', '→', 'Reply / Dashboard'],
+    techGroups: [
+      { label: 'AI Layer', color: 'bg-yellow', items: ['OpenAI GPT', 'Scenario Analysis', 'Context Engine'] },
+      { label: 'Frontend', color: 'bg-pink', items: ['Next.js', 'TypeScript', 'Tailwind CSS'] },
+      { label: 'Backend / DB', color: 'bg-blue', items: ['Supabase', 'Realtime DB', 'Edge Functions'] },
+      { label: 'Integrations', color: 'bg-green', items: ['Meta Business API', 'WhatsApp Cloud API'] },
+    ],
+    links: {},
+    accent: 'bg-green',
+    featured: false,
+    stat: 'AI-powered CRM',
+  },
+  {
+    num: '06',
     title: 'Unisel Realty Platform',
     label: 'Freelance',
     description:
@@ -89,7 +107,7 @@ const PROJECTS = [
     stat: '100% SEO indexable',
   },
   {
-    num: '06',
+    num: '07',
     title: 'Multilingual Language Recognition',
     label: 'ML / NLP Research',
     description:
