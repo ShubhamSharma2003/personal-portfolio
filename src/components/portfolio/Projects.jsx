@@ -73,13 +73,14 @@ const PROJECTS = [
   },
   {
     num: '05',
-    title: 'WhatsApp AI Agent Dashboard',
+    title: 'WhatsApp + Voice AI Agent Platform',
     label: 'Freelance · Real Estate',
     description:
-      'Full-stack conversational AI CRM built for a real estate company. Centralizes all WhatsApp conversations across clients in one dashboard, with an AI agent that reads each lead\'s context, analyzes the scenario, and responds intelligently. Timeline-based nudge engine auto-follows up cold leads at the right moment. Broadcast messaging to segment audiences with one click. Fully configurable AI persona and response rules per business unit.',
-    flow: ['WhatsApp Msg', '→', 'Meta Webhook', '→', 'AI Agent (OpenAI)', '→', 'Reply / Dashboard'],
+      'Full-stack AI communication platform built for a real estate company. Centralizes WhatsApp conversations across all leads in one dashboard — with an AI agent that reads context, analyzes the scenario, and responds intelligently. Integrated a real-time voice calling layer where an AI agent picks up calls, converses naturally with customers using STT/TTS, and retrieves context via a RAG pipeline. Timeline-based nudge engine auto-follows up cold leads. Broadcast messaging, configurable AI persona and response rules per business unit.',
+    flow: ['Call / WhatsApp', '→', 'STT / Webhook', '→', 'RAG + AI Agent', '→', 'TTS / Reply'],
     techGroups: [
-      { label: 'AI Layer', color: 'bg-yellow', items: ['OpenAI GPT', 'Scenario Analysis', 'Context Engine'] },
+      { label: 'AI Layer', color: 'bg-yellow', items: ['OpenAI GPT', 'RAG Pipeline', 'ReAct Agent', 'Scenario Analysis'] },
+      { label: 'Voice AI', color: 'bg-orange', items: ['Speech-to-Text', 'Text-to-Speech', 'ElevenLabs', 'Cartesia'] },
       { label: 'Frontend', color: 'bg-pink', items: ['Next.js', 'TypeScript', 'Tailwind CSS'] },
       { label: 'Backend / DB', color: 'bg-blue', items: ['Supabase', 'Realtime DB', 'Edge Functions'] },
       { label: 'Integrations', color: 'bg-green', items: ['Meta Business API', 'WhatsApp Cloud API'] },
@@ -87,7 +88,7 @@ const PROJECTS = [
     links: {},
     accent: 'bg-green',
     featured: false,
-    stat: 'AI-powered CRM',
+    stat: 'Voice + Chat AI',
   },
   {
     num: '06',
