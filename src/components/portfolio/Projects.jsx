@@ -92,6 +92,25 @@ const PROJECTS = [
   },
   {
     num: '06',
+    title: 'Autonomous Bulk Calling Infrastructure',
+    label: 'Freelance · Deployed × 2',
+    description:
+      'Production-grade AI calling platform handling both outbound campaigns and inbound calls at scale. Dynamically spins up voice AI agents based on real-time call traffic — each agent converses naturally with a real human, understands their requirement, and takes action. Multi-tenant with configurable personas per business vertical (real estate, dental). Fallback model switching ensures 100% uptime. Self-hosted on VPS with a remote control dashboard. Already live at two companies.',
+    flow: ['Call Traffic', '→', 'Traffic Manager', '→', 'Agent Pool (Auto-scale)', '→', 'STT → LLM → TTS', '→', 'Customer'],
+    techGroups: [
+      { label: 'AI Layer', color: 'bg-yellow', items: ['LLM Agent', 'RAG Pipeline', 'ReAct Loops', 'Fallback Models'] },
+      { label: 'Voice AI', color: 'bg-orange', items: ['Speech-to-Text', 'Text-to-Speech', 'ElevenLabs', 'Cartesia', 'OpenAI Whisper'] },
+      { label: 'Infrastructure', color: 'bg-pink', items: ['VPS Deployment', 'Auto-scaling', 'Load Balancing', 'Traffic Management'] },
+      { label: 'Backend', color: 'bg-blue', items: ['Python', 'Node.js', 'WebSockets', 'Real-time Audio'] },
+      { label: 'Multi-tenant', color: 'bg-green', items: ['Real Estate', 'Dental', 'Configurable Personas'] },
+    ],
+    links: {},
+    accent: 'bg-orange',
+    featured: false,
+    stat: '2 companies · 24/7 live',
+  },
+  {
+    num: '07',
     title: 'Unisel Realty Platform',
     label: 'Freelance',
     description:
@@ -108,7 +127,7 @@ const PROJECTS = [
     stat: '100% SEO indexable',
   },
   {
-    num: '07',
+    num: '08',
     title: 'Multilingual Language Recognition',
     label: 'ML / NLP Research',
     description:
