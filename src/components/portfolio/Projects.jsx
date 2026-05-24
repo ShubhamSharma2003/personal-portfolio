@@ -8,7 +8,7 @@ const PROJECTS = [
     flow: ['Email / Upload', '→', 'AI Parser', '→', 'OMS Validation', '→', 'Auto-Punch'],
     techGroups: [
       { label: 'AI Layer', color: 'bg-yellow', items: ['Agentic AI', 'N8N', 'LLM', 'OCR Pipeline'] },
-      { label: 'Backend', color: 'bg-pink', items: ['Node.js', 'Python', 'FastAPI'] },
+      { label: 'Backend', color: 'bg-pink', items: ['Node.js', 'Python', 'FastAPI', 'Kafka', 'Redis'] },
       { label: 'Integrations', color: 'bg-blue', items: ['OMS API', 'Email Webhook', 'Amazon', 'Flipkart', 'LFR'] },
       { label: 'Frontend', color: 'bg-green', items: ['Next.js', 'TypeScript'] },
     ],
@@ -44,7 +44,7 @@ const PROJECTS = [
     flow: ['Social APIs', '→', 'NLP Pipeline', '→', 'Sentiment Score', '→', 'Dashboard'],
     techGroups: [
       { label: 'AI Layer', color: 'bg-yellow', items: ['Sentiment Analysis', 'NLP', 'N8N'] },
-      { label: 'Backend', color: 'bg-pink', items: ['Python', 'Node.js'] },
+      { label: 'Backend', color: 'bg-pink', items: ['Python', 'Node.js', 'Kafka', 'Redis', 'WebSockets'] },
       { label: 'Integrations', color: 'bg-blue', items: ['Instagram API', 'Reddit API', 'YouTube API'] },
       { label: 'Frontend', color: 'bg-green', items: ['Next.js', 'TypeScript'] },
     ],
@@ -62,7 +62,7 @@ const PROJECTS = [
     flow: ['DM / Comment', '→', 'LLM Agent', '→', 'Shopify Lookup', '→', 'Auto-Reply'],
     techGroups: [
       { label: 'AI Layer', color: 'bg-yellow', items: ['LLM Agent', 'Prompt Engineering', 'NLP', 'N8N'] },
-      { label: 'Backend', color: 'bg-pink', items: ['Node.js', 'Webhook Handler'] },
+      { label: 'Backend', color: 'bg-pink', items: ['Node.js', 'Redis', 'Webhook Handler', 'REST APIs'] },
       { label: 'Integrations', color: 'bg-blue', items: ['Instagram Graph API', 'Shopify API'] },
       { label: 'Outcome', color: 'bg-green', items: ['24/7 Auto-Response', '0 Human Agents'] },
     ],
@@ -73,13 +73,14 @@ const PROJECTS = [
   },
   {
     num: '05',
-    title: 'WhatsApp AI Agent Dashboard',
+    title: 'WhatsApp + Voice AI Agent Platform',
     label: 'Freelance · Real Estate',
     description:
-      'Full-stack conversational AI CRM built for a real estate company. Centralizes all WhatsApp conversations across clients in one dashboard, with an AI agent that reads each lead\'s context, analyzes the scenario, and responds intelligently. Timeline-based nudge engine auto-follows up cold leads at the right moment. Broadcast messaging to segment audiences with one click. Fully configurable AI persona and response rules per business unit.',
-    flow: ['WhatsApp Msg', '→', 'Meta Webhook', '→', 'AI Agent (OpenAI)', '→', 'Reply / Dashboard'],
+      'Full-stack AI communication platform built for a real estate company. Centralizes WhatsApp conversations across all leads in one dashboard — with an AI agent that reads context, analyzes the scenario, and responds intelligently. Integrated a real-time voice calling layer where an AI agent picks up calls, converses naturally with customers using STT/TTS, and retrieves context via a RAG pipeline. Timeline-based nudge engine auto-follows up cold leads. Broadcast messaging, configurable AI persona and response rules per business unit.',
+    flow: ['Call / WhatsApp', '→', 'STT / Webhook', '→', 'RAG + AI Agent', '→', 'TTS / Reply'],
     techGroups: [
-      { label: 'AI Layer', color: 'bg-yellow', items: ['OpenAI GPT', 'Scenario Analysis', 'Context Engine'] },
+      { label: 'AI Layer', color: 'bg-yellow', items: ['OpenAI GPT', 'RAG Pipeline', 'ReAct Agent', 'Scenario Analysis'] },
+      { label: 'Voice AI', color: 'bg-orange', items: ['Speech-to-Text', 'Text-to-Speech', 'ElevenLabs', 'Cartesia'] },
       { label: 'Frontend', color: 'bg-pink', items: ['Next.js', 'TypeScript', 'Tailwind CSS'] },
       { label: 'Backend / DB', color: 'bg-blue', items: ['Supabase', 'Realtime DB', 'Edge Functions'] },
       { label: 'Integrations', color: 'bg-green', items: ['Meta Business API', 'WhatsApp Cloud API'] },
@@ -87,10 +88,29 @@ const PROJECTS = [
     links: {},
     accent: 'bg-green',
     featured: false,
-    stat: 'AI-powered CRM',
+    stat: 'Voice + Chat AI',
   },
   {
     num: '06',
+    title: 'Autonomous Bulk Calling Infrastructure',
+    label: 'Freelance · Deployed × 2',
+    description:
+      'Production-grade AI calling platform handling both outbound campaigns and inbound calls at scale. Dynamically spins up voice AI agents based on real-time call traffic — each agent converses naturally with a real human, understands their requirement, and takes action. Multi-tenant with configurable personas per business vertical (real estate, dental). Fallback model switching ensures 100% uptime. Self-hosted on VPS with a remote control dashboard. Already live at two companies.',
+    flow: ['Call Traffic', '→', 'Traffic Manager', '→', 'Agent Pool (Auto-scale)', '→', 'STT → LLM → TTS', '→', 'Customer'],
+    techGroups: [
+      { label: 'AI Layer', color: 'bg-yellow', items: ['LLM Agent', 'RAG Pipeline', 'ReAct Loops', 'Fallback Models'] },
+      { label: 'Voice AI', color: 'bg-orange', items: ['Speech-to-Text', 'Text-to-Speech', 'ElevenLabs', 'Cartesia', 'OpenAI Whisper'] },
+      { label: 'Infrastructure', color: 'bg-pink', items: ['VPS Deployment', 'Auto-scaling', 'Load Balancing', 'Traffic Management'] },
+      { label: 'Backend', color: 'bg-blue', items: ['Python', 'Node.js', 'WebSockets', 'Real-time Audio'] },
+      { label: 'Multi-tenant', color: 'bg-green', items: ['Real Estate', 'Dental', 'Configurable Personas'] },
+    ],
+    links: {},
+    accent: 'bg-orange',
+    featured: false,
+    stat: '2 companies · 24/7 live',
+  },
+  {
+    num: '07',
     title: 'Unisel Realty Platform',
     label: 'Freelance',
     description:
@@ -107,7 +127,7 @@ const PROJECTS = [
     stat: '100% SEO indexable',
   },
   {
-    num: '07',
+    num: '08',
     title: 'Multilingual Language Recognition',
     label: 'ML / NLP Research',
     description:

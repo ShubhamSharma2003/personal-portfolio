@@ -46,8 +46,14 @@ const EXPERIENCES = [
         title: 'Noise Junior E-Commerce Platform',
         desc: 'Leading frontend and backend architecture for Noise Junior — engaging UI/UX, scalable Node.js backend, full payment and checkout flow. Owned from design handoff to production deployment.',
       },
+      {
+        tag: 'BACKEND',
+        tagColor: 'bg-blue',
+        title: 'Event-Driven Backend Infrastructure',
+        desc: 'Designed and implemented event-driven microservice architecture across NOISE internal systems — Kafka for high-throughput event streaming between services, Redis for caching and pub/sub queues, Node.js REST APIs powering the AI pipelines and e-commerce backends. Built for reliability and horizontal scale.',
+      },
     ],
-    tags: ['Next.js', 'Node.js', 'Python', 'N8N', 'Agentic AI', 'LLM Integration', 'RAG', 'NLP', 'Docker', 'Kubernetes', 'Jenkins', 'Shopify API', 'Instagram API'],
+    tags: ['Next.js', 'Node.js', 'Python', 'N8N', 'Agentic AI', 'LLM Integration', 'RAG', 'NLP', 'Docker', 'Kubernetes', 'Jenkins', 'Kafka', 'Redis', 'Microservices', 'Shopify API', 'Instagram API'],
   },
   {
     company: 'NOISE',
