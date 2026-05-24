@@ -8,7 +8,7 @@ const PROJECTS = [
     flow: ['Email / Upload', '→', 'AI Parser', '→', 'OMS Validation', '→', 'Auto-Punch'],
     techGroups: [
       { label: 'AI Layer', color: 'bg-yellow', items: ['Agentic AI', 'N8N', 'LLM', 'OCR Pipeline'] },
-      { label: 'Backend', color: 'bg-pink', items: ['Node.js', 'Python', 'FastAPI'] },
+      { label: 'Backend', color: 'bg-pink', items: ['Node.js', 'Python', 'FastAPI', 'Kafka', 'Redis'] },
       { label: 'Integrations', color: 'bg-blue', items: ['OMS API', 'Email Webhook', 'Amazon', 'Flipkart', 'LFR'] },
       { label: 'Frontend', color: 'bg-green', items: ['Next.js', 'TypeScript'] },
     ],
@@ -44,7 +44,7 @@ const PROJECTS = [
     flow: ['Social APIs', '→', 'NLP Pipeline', '→', 'Sentiment Score', '→', 'Dashboard'],
     techGroups: [
       { label: 'AI Layer', color: 'bg-yellow', items: ['Sentiment Analysis', 'NLP', 'N8N'] },
-      { label: 'Backend', color: 'bg-pink', items: ['Python', 'Node.js'] },
+      { label: 'Backend', color: 'bg-pink', items: ['Python', 'Node.js', 'Kafka', 'Redis', 'WebSockets'] },
       { label: 'Integrations', color: 'bg-blue', items: ['Instagram API', 'Reddit API', 'YouTube API'] },
       { label: 'Frontend', color: 'bg-green', items: ['Next.js', 'TypeScript'] },
     ],
@@ -62,7 +62,7 @@ const PROJECTS = [
     flow: ['DM / Comment', '→', 'LLM Agent', '→', 'Shopify Lookup', '→', 'Auto-Reply'],
     techGroups: [
       { label: 'AI Layer', color: 'bg-yellow', items: ['LLM Agent', 'Prompt Engineering', 'NLP', 'N8N'] },
-      { label: 'Backend', color: 'bg-pink', items: ['Node.js', 'Webhook Handler'] },
+      { label: 'Backend', color: 'bg-pink', items: ['Node.js', 'Redis', 'Webhook Handler', 'REST APIs'] },
       { label: 'Integrations', color: 'bg-blue', items: ['Instagram Graph API', 'Shopify API'] },
       { label: 'Outcome', color: 'bg-green', items: ['24/7 Auto-Response', '0 Human Agents'] },
     ],

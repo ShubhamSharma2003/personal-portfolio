@@ -37,6 +37,7 @@ const SKILL_GROUPS = [
       'Docker', 'Kubernetes', 'Jenkins', 'Git/GitHub', 'PostgreSQL',
       'GraphQL', 'Shopify API', 'Instagram Graph API', 'Gmail API',
       'Postman', 'PowerBI', 'Tableau', 'ElevenLabs', 'Cartesia', 'Supabase', 'Redis',
+      'Kafka', 'RabbitMQ', 'WebSockets', 'REST APIs', 'Microservices',
     ],
     hoverBg: 'hover:bg-blue hover:border-blue hover:text-cream',
   },
