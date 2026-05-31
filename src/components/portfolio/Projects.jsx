@@ -61,7 +61,7 @@ const PROJECTS = [
       'AI agent that auto-replies to every comment and DM on Noise reels, posts, and videos — in the user\'s language, matching tone, preserving brand identity. Fully integrated with the Shopify store to answer product queries, check availability, and drive conversions without human involvement.',
     flow: ['DM / Comment', '→', 'LLM Agent', '→', 'Shopify Lookup', '→', 'Auto-Reply'],
     techGroups: [
-      { label: 'AI Layer', color: 'bg-yellow', items: ['LLM Agent', 'Prompt Engineering', 'NLP', 'N8N'] },
+      { label: 'AI Layer', color: 'bg-yellow', items: ['LLM Agent', 'Prompt Engineering', 'Embeddings', 'Semantic Search', 'NLP', 'N8N'] },
       { label: 'Backend', color: 'bg-pink', items: ['Node.js', 'Redis', 'Webhook Handler', 'REST APIs'] },
       { label: 'Integrations', color: 'bg-blue', items: ['Instagram Graph API', 'Shopify API'] },
       { label: 'Outcome', color: 'bg-green', items: ['24/7 Auto-Response', '0 Human Agents'] },
@@ -79,7 +79,7 @@ const PROJECTS = [
       'Full-stack AI communication platform built for a real estate company. Centralizes WhatsApp conversations across all leads in one dashboard — with an AI agent that reads context, analyzes the scenario, and responds intelligently. Integrated a real-time voice calling layer where an AI agent picks up calls, converses naturally with customers using STT/TTS, and retrieves context via a RAG pipeline. Timeline-based nudge engine auto-follows up cold leads. Broadcast messaging, configurable AI persona and response rules per business unit.',
     flow: ['Call / WhatsApp', '→', 'STT / Webhook', '→', 'RAG + AI Agent', '→', 'TTS / Reply'],
     techGroups: [
-      { label: 'AI Layer', color: 'bg-yellow', items: ['OpenAI GPT', 'RAG Pipeline', 'ReAct Agent', 'Scenario Analysis'] },
+      { label: 'AI Layer', color: 'bg-yellow', items: ['OpenAI GPT', 'Prompt Engineering', 'RAG Pipeline', 'Vector DB', 'Embeddings', 'ReAct Agent', 'AI Evaluation'] },
       { label: 'Voice AI', color: 'bg-orange', items: ['Speech-to-Text', 'Text-to-Speech', 'ElevenLabs', 'Cartesia'] },
       { label: 'Frontend', color: 'bg-pink', items: ['Next.js', 'TypeScript', 'Tailwind CSS'] },
       { label: 'Backend / DB', color: 'bg-blue', items: ['Supabase', 'Realtime DB', 'Edge Functions'] },
@@ -98,7 +98,7 @@ const PROJECTS = [
       'Production-grade AI calling platform handling both outbound campaigns and inbound calls at scale. Dynamically spins up voice AI agents based on real-time call traffic — each agent converses naturally with a real human, understands their requirement, and takes action. Multi-tenant with configurable personas per business vertical (real estate, dental). Fallback model switching ensures 100% uptime. Self-hosted on VPS with a remote control dashboard. Already live at two companies.',
     flow: ['Call Traffic', '→', 'Traffic Manager', '→', 'Agent Pool (Auto-scale)', '→', 'STT → LLM → TTS', '→', 'Customer'],
     techGroups: [
-      { label: 'AI Layer', color: 'bg-yellow', items: ['LLM Agent', 'RAG Pipeline', 'ReAct Loops', 'Fallback Models'] },
+      { label: 'AI Layer', color: 'bg-yellow', items: ['LLM Agent', 'Prompt Engineering', 'RAG Pipeline', 'Vector DB', 'Embeddings', 'Semantic Search', 'ReAct Loops', 'Fallback Models'] },
       { label: 'Voice AI', color: 'bg-orange', items: ['Speech-to-Text', 'Text-to-Speech', 'ElevenLabs', 'Cartesia', 'OpenAI Whisper'] },
       { label: 'Infrastructure', color: 'bg-pink', items: ['VPS Deployment', 'Auto-scaling', 'Load Balancing', 'Traffic Management'] },
       { label: 'Backend', color: 'bg-blue', items: ['Python', 'Node.js', 'WebSockets', 'Real-time Audio'] },

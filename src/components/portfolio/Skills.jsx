@@ -6,9 +6,11 @@ const SKILL_GROUPS = [
     items: [
       'LLM Integration', 'Agentic AI', 'N8N Automation', 'Prompt Engineering',
       'RAG Pipelines', 'Document AI', 'OCR Pipelines', 'Sentiment Analysis',
-      'NLP / NER', 'Vector Embeddings', 'Agent Orchestration', 'Webhook Automation',
-      'Function / Tool Calling', 'ReAct Loops', 'Multi-Agent Systems', 'Fine-tuning',
+      'NLP / NER', 'Vector Embeddings', 'Vector Databases', 'Semantic Search',
+      'Agent Orchestration', 'Webhook Automation', 'Function / Tool Calling',
+      'ReAct Loops', 'Multi-Agent Systems', 'Fine-tuning',
       'Voice AI', 'Speech-to-Text', 'Text-to-Speech', 'Real-time AI',
+      'AI Output Evaluation', 'Structured Metrics',
     ],
     hoverBg: 'hover:bg-yellow hover:border-yellow hover:text-ink',
   },
