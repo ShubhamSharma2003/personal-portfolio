@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SS">
+  <defs>
+    <!-- Mirrors bg-g-main: linear-gradient(110deg, #4E8CFF, #9B72F2 45%, #F0578E 75%, #FFB86B) -->
+    <linearGradient id="g" x1="-10.23%" y1="28.07%" x2="110.23%" y2="71.93%">
+      <stop offset="0" stop-color="#4E8CFF" />
+      <stop offset="0.45" stop-color="#9B72F2" />
+      <stop offset="0.75" stop-color="#F0578E" />
+      <stop offset="1" stop-color="#FFB86B" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="20" fill="url(#g)" />
+  <text
+    x="32"
+    y="43.5"
+    fill="#fff"
+    text-anchor="middle"
+    textLength="40"
+    lengthAdjust="spacingAndGlyphs"
+    font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+    font-size="30"
+    font-weight="800"
+  >SS</text>
+</svg>

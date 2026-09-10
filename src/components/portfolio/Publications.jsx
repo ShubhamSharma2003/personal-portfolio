@@ -1,76 +1,127 @@
-export default function Publications() {
-  return (
-    <section id="publications" className="py-16 md:py-24 bg-yellow border-y-2 border-ink">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-8 md:mb-14">
-          <span className="font-mono text-xs uppercase tracking-[0.3em] border-2 border-ink bg-ink text-cream px-3 py-1 inline-block">
-            005 — Publications
-          </span>
-        </div>
+import { motion, useReducedMotion } from 'framer-motion'
+import Reveal from '../motion/Reveal'
+import Parallax from '../motion/Parallax'
+import TextReveal from '../motion/TextReveal'
+import GlassCard from '../motion/GlassCard'
+import { Stagger, StaggerItem } from '../motion/Stagger'
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center">
+const TAGS = ['Machine Learning', 'Traffic Prediction', 'Urban Planning', 'IEEE 2025']
+const DOI = 'https://doi.org/10.1109/ICCoSD66074.2025.11348535'
+
+export default function Publications() {
+  const reduce = useReducedMotion()
+
+  return (
+    <section id="publications" className="relative py-24 md:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <Reveal className="mb-12 md:mb-16">
+          <span className="section-label">005 — Publications</span>
+        </Reveal>
+
+        <div className="grid items-center gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           {/* Left */}
           <div>
-            <h2 className="section-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-ink mb-5 md:mb-6">
-              RESEARCH
-              <br />
-              PUBLISHED
-            </h2>
-            <p className="font-mono text-sm text-ink/50 uppercase tracking-widest mb-8">
-              IEEE International Conference 2025
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {['Machine Learning', 'Traffic Prediction', 'Urban Planning', 'IEEE 2025'].map(
-                (tag) => (
-                  <span
-                    key={tag}
-                    className="font-mono text-xs border-2 border-ink px-3 py-1.5 uppercase tracking-wider bg-ink text-yellow"
+            <Parallax speed={-26}>
+              <h2 className="section-heading mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem]">
+                <TextReveal text="Research" className="block text-white" />
+                <TextReveal
+                  text="Published"
+                  className="block"
+                  wordClassName="gradient-text"
+                  delay={0.12}
+                />
+              </h2>
+            </Parallax>
+            <Reveal delay={0.15}>
+              <p className="text-white/66 mb-8 font-mono text-[12px] uppercase tracking-[0.16em]">
+                IEEE International Conference 2025
+              </p>
+            </Reveal>
+            <Stagger className="flex flex-wrap gap-2" stagger={0.07}>
+              {TAGS.map((tag) => (
+                <StaggerItem key={tag} distance={12}>
+                  <motion.span
+                    whileHover={
+                      reduce
+                        ? undefined
+                        : {
+                            y: -3,
+                            borderColor: 'rgba(240,87,142,0.45)',
+                            backgroundColor: 'rgba(240,87,142,0.10)',
+                          }
+                    }
+                    transition={{ type: 'spring', stiffness: 400, damping: 24 }}
+                    className="chip cursor-default"
                   >
                     {tag}
-                  </span>
-                )
-              )}
-            </div>
+                  </motion.span>
+                </StaggerItem>
+              ))}
+            </Stagger>
           </div>
 
-          {/* Right — Paper card */}
-          <div className="border-2 border-ink bg-cream shadow-brutal-xl p-5 sm:p-8">
-            <div className="flex items-start gap-4 mb-6">
-              <span className="font-syne font-black text-6xl text-ink/10 leading-none select-none">¶</span>
-              <div>
-                <p className="font-mono text-[10px] uppercase tracking-widest text-ink/40 mb-3">
+          {/* Right — paper card */}
+          <Reveal direction="left" amount={0.15}>
+            <GlassCard
+              className="gradient-border rounded-[1.75rem]"
+              tilt={false}
+              glow="rgba(240,87,142,0.16)"
+            >
+              {/* Oversized glyph watermark — drifts against the scroll for depth */}
+              <Parallax
+                speed={64}
+                className="pointer-events-none absolute -right-2 -top-10 select-none"
+              >
+                <span
+                  aria-hidden="true"
+                  className="gradient-text block text-[11rem] font-bold leading-none opacity-[0.16]"
+                >
+                  ¶
+                </span>
+              </Parallax>
+
+              <div className="relative p-6 sm:p-9">
+                <p className="text-white/58 mb-4 font-mono text-[11px] uppercase tracking-[0.15em]">
                   DOI: 10.1109/ICCoSD66074.2025.11348535
                 </p>
-                <h3 className="font-syne font-black text-lg md:text-xl uppercase leading-tight mb-4 text-ink">
-                  Multi-Class Traffic Flow Prediction with Machine Learning for Urban Planning Applications
+
+                <h3 className="mb-5 max-w-xl text-lg font-semibold leading-snug tracking-tight text-white md:text-[1.4rem]">
+                  Multi-Class Traffic Flow Prediction with Machine Learning for Urban Planning
+                  Applications
                 </h3>
-                <p className="font-grotesk text-sm text-ink/65 leading-relaxed">
+
+                <p className="text-white/72 text-sm leading-relaxed">
                   Yash Sarda, Shriya Sinha,{' '}
-                  <strong className="text-ink underline decoration-yellow decoration-2">
+                  <strong className="text-white/92 relative font-semibold">
                     Shubham Sharma
+                    <span className="absolute -bottom-0.5 left-0 h-[2px] w-full rounded bg-g-warm" />
                   </strong>
                   , Payal Saini, Shubham Garg, Ashis Tripathy.
                 </p>
-              </div>
-            </div>
 
-            <div className="border-t-2 border-ink pt-5 flex flex-wrap items-center justify-between gap-4">
-              <div>
-                <p className="font-mono text-[10px] uppercase tracking-widest text-ink/40">Venue</p>
-                <p className="font-grotesk font-semibold text-sm text-ink mt-0.5">
-                  ICCoSD 2025 · Ranchi, India
-                </p>
+                <div className="mt-7 flex flex-wrap items-center justify-between gap-4 border-t border-white/[0.07] pt-6">
+                  <div>
+                    <p className="text-white/58 font-mono text-[11px] uppercase tracking-[0.15em]">
+                      Venue
+                    </p>
+                    <p className="text-white/92 mt-1 text-sm font-semibold">
+                      ICCoSD 2025 · Ranchi, India
+                    </p>
+                  </div>
+                  <motion.a
+                    href={DOI}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={reduce ? undefined : { scale: 1.04, y: -2 }}
+                    whileTap={{ scale: 0.97 }}
+                    className="btn-primary !py-2.5 !text-[13px]"
+                  >
+                    View Paper ↗
+                  </motion.a>
+                </div>
               </div>
-              <a
-                href="https://doi.org/10.1109/ICCoSD66074.2025.11348535"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-brutal-dark !text-xs !py-2"
-              >
-                View Paper ↗
-              </a>
-            </div>
-          </div>
+            </GlassCard>
+          </Reveal>
         </div>
       </div>
     </section>
