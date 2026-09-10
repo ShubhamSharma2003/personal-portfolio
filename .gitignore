@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local env files — VITE_* values are bundled into the client, but the
+# file itself stays out of the repo. Document required keys in .env.example.
+.env
+.env.local
+.env.*.local
