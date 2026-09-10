@@ -1,3 +1,6 @@
+import { MotionConfig } from 'framer-motion'
+import AuroraBackground from './components/motion/AuroraBackground'
+import ScrollProgress from './components/motion/ScrollProgress'
 import Navbar from './components/portfolio/Navbar'
 import Hero from './components/portfolio/Hero'
 import About from './components/portfolio/About'
@@ -10,18 +13,22 @@ import Footer from './components/portfolio/Footer'
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-cream font-grotesk">
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Publications />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <MotionConfig reducedMotion="user">
+      <div className="relative min-h-screen font-sans antialiased">
+        <AuroraBackground />
+        <ScrollProgress />
+        <Navbar />
+        <main className="relative">
+          <Hero />
+          <About />
+          <Skills />
+          <Experience />
+          <Projects />
+          <Publications />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </MotionConfig>
   )
 }

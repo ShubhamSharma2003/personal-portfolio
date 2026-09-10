@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Registered so the conic-gradient border can be animated by the browser. */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
 @layer base {
   * {
     margin: 0;
@@ -11,18 +18,21 @@
 
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
-    background-color: #FFFEF0;
-    color: #0A0A0A;
-    font-family: 'Space Grotesk', sans-serif;
+    background-color: #08080C;
+    color: rgba(255, 255, 255, 0.92);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: 'cv11', 'ss01';
+    -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
 
   ::selection {
-    background: #FFE500;
-    color: #0A0A0A;
+    background: rgba(155, 114, 242, 0.4);
+    color: #fff;
   }
 
   ::-webkit-scrollbar {
@@ -30,80 +40,226 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #FFFEF0;
-    border-left: 2px solid #0A0A0A;
+    background: #08080C;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #0A0A0A;
+    background: linear-gradient(180deg, #4E8CFF, #9B72F2, #F0578E);
+    border-radius: 99px;
+    border: 3px solid #08080C;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #FFE500;
+    border-width: 2px;
   }
 }
 
 @layer components {
-  .btn-brutal {
-    @apply inline-flex items-center justify-center gap-2 border-2 border-ink bg-yellow text-ink font-bold px-6 py-3
-           shadow-brutal hover:translate-x-[4px] hover:translate-y-[4px]
-           hover:shadow-none transition-all duration-150 cursor-pointer
-           font-grotesk uppercase tracking-widest text-sm whitespace-nowrap;
+  /* ---------- Glass surfaces ---------- */
+  .glass {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.6),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
   }
 
-  .btn-brutal-outline {
-    @apply inline-flex items-center justify-center gap-2 border-2 border-ink bg-cream text-ink font-bold px-6 py-3
-           shadow-brutal hover:translate-x-[4px] hover:translate-y-[4px]
-           hover:shadow-none transition-all duration-150 cursor-pointer
-           font-grotesk uppercase tracking-widest text-sm whitespace-nowrap;
+  .glass-strong {
+    background: rgba(19, 19, 28, 0.62);
+    backdrop-filter: blur(24px) saturate(150%);
+    -webkit-backdrop-filter: blur(24px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 24px 64px -16px rgba(0, 0, 0, 0.7),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
   }
 
-  .btn-brutal-dark {
-    @apply inline-flex items-center justify-center gap-2 border-2 border-ink bg-ink text-cream font-bold px-6 py-3
-           shadow-brutal hover:translate-x-[4px] hover:translate-y-[4px]
-           hover:shadow-none transition-all duration-150 cursor-pointer
-           font-grotesk uppercase tracking-widest text-sm whitespace-nowrap;
+  .glass-nav {
+    background: rgba(13, 13, 20, 0.6);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow: 0 8px 40px -12px rgba(0, 0, 0, 0.8),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.07);
   }
 
-  .btn-brutal-pink {
-    @apply inline-flex items-center justify-center gap-2 border-2 border-ink bg-pink text-cream font-bold px-6 py-3
-           shadow-brutal hover:translate-x-[4px] hover:translate-y-[4px]
-           hover:shadow-none transition-all duration-150 cursor-pointer
-           font-grotesk uppercase tracking-widest text-sm whitespace-nowrap;
+  .glass-subtle {
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.06);
   }
 
-  .section-label {
-    @apply font-mono text-xs uppercase tracking-[0.3em] border-2 border-ink bg-ink text-cream px-3 py-1 inline-block;
+  /* ---------- Gradient text ---------- */
+  .gradient-text {
+    background-image: linear-gradient(110deg, #4E8CFF 0%, #9B72F2 42%, #F0578E 72%, #FFB86B 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
   }
 
-  .section-heading {
-    @apply font-syne font-black uppercase leading-none tracking-tight;
+  .gradient-text-animated {
+    @apply gradient-text;
+    animation: gradientPan 8s ease infinite;
   }
 
-  .skill-tag {
-    @apply font-mono text-xs border-2 border-ink px-3 py-1.5 uppercase tracking-wider
-           hover:bg-ink hover:text-cream transition-all duration-150 cursor-default select-none;
+  .gradient-text-cool {
+    background-image: linear-gradient(120deg, #4FD8E8 0%, #4E8CFF 50%, #9B72F2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
   }
 
-  .input-brutal {
-    @apply w-full border-2 border-ink bg-cream px-4 py-3 font-grotesk text-ink
-           focus:outline-none focus:shadow-brutal transition-all duration-150
-           placeholder:text-ink/30 text-sm;
+  /* ---------- Rotating conic gradient border ---------- */
+  .gradient-border {
+    position: relative;
+    isolation: isolate;
   }
 
-  .card-hover {
-    @apply hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all duration-150;
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: conic-gradient(
+      from var(--angle),
+      transparent 0%,
+      #4E8CFF 20%,
+      #9B72F2 40%,
+      #F0578E 60%,
+      transparent 80%
+    );
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: rotateAngle 6s linear infinite;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  @keyframes rotateAngle {
+    to {
+      --angle: 360deg;
+    }
+  }
+
+  /* Static fallback where @property is unsupported. */
+  @supports not (background: conic-gradient(from var(--angle), red, blue)) {
+    .gradient-border::before {
+      background: linear-gradient(120deg, #4E8CFF, #9B72F2, #F0578E);
+      animation: none;
+    }
+  }
+
+  /* ---------- Texture ---------- */
+  .noise-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
   .dot-grid {
-    background-image: radial-gradient(circle, rgba(10,10,10,0.12) 1px, transparent 1px);
-    background-size: 24px 24px;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    background-size: 28px 28px;
   }
 
   .grid-lines {
     background-image:
-      linear-gradient(rgba(10,10,10,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(10,10,10,0.04) 1px, transparent 1px);
-    background-size: 40px 40px;
+      linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center gap-2 rounded-full px-6 py-3
+           text-sm font-semibold text-white overflow-hidden whitespace-nowrap;
+    background-image: linear-gradient(110deg, #4E8CFF, #9B72F2 50%, #F0578E);
+    background-size: 200% auto;
+    box-shadow: 0 8px 28px -8px rgba(155, 114, 242, 0.6);
+  }
+
+  .btn-glass {
+    @apply relative inline-flex items-center justify-center gap-2 rounded-full px-6 py-3
+           text-sm font-semibold text-white/90 whitespace-nowrap glass;
+  }
+
+  .btn-ghost {
+    @apply relative inline-flex items-center justify-center gap-2 rounded-full px-6 py-3
+           text-sm font-semibold text-white/70 whitespace-nowrap
+           border border-white/10 bg-white/[0.02];
+  }
+
+  /* ---------- Chips & labels ---------- */
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-white/10
+           bg-white/[0.03] px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider text-white/60;
+  }
+
+  .section-label {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03]
+           px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.25em] text-white/50;
+  }
+
+  .section-heading {
+    @apply font-semibold tracking-[-0.03em] leading-[0.95];
+  }
+
+  /* ---------- Form ---------- */
+  .input-glass {
+    @apply w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3
+           text-sm text-white/90 outline-none
+           placeholder:text-white/25;
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+  }
+
+  .input-glass:focus {
+    border-color: rgba(155, 114, 242, 0.5);
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 0 3px rgba(155, 114, 242, 0.14), 0 0 24px -8px rgba(155, 114, 242, 0.5);
+  }
+}
+
+@layer utilities {
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Hides the scrollbar on a snap carousel. The track stays scrollable by
+     touch, wheel, trackpad and keyboard — only the bar itself is hidden. */
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Honour the OS reduced-motion setting for every CSS-driven animation.
+   Motion's own animations are gated separately via useReducedMotion(). */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

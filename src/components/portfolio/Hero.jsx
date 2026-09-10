@@ -1,9 +1,26 @@
+import { useRef } from 'react'
+import { motion, useScroll, useTransform, useSpring, useReducedMotion } from 'framer-motion'
 import profilePic from '../../assets/images/shubham-new.jpg'
+import Counter from '../motion/Counter'
+import MagneticButton from '../motion/MagneticButton'
+import { Stagger, StaggerItem } from '../motion/Stagger'
 
 const TICKER_ITEMS = [
-  'Agentic AI', 'LLM Integration', 'N8N Automation', 'RAG Pipelines', 'Document AI',
-  'Next.js', 'TypeScript', 'Python', 'FastAPI', 'Prompt Engineering',
-  'Docker', 'Kubernetes', 'React Native', 'Sentiment Analysis', 'Webhook Automation',
+  'Agentic AI',
+  'LLM Integration',
+  'N8N Automation',
+  'RAG Pipelines',
+  'Document AI',
+  'Next.js',
+  'TypeScript',
+  'Python',
+  'FastAPI',
+  'Prompt Engineering',
+  'Docker',
+  'Kubernetes',
+  'React Native',
+  'Sentiment Analysis',
+  'Webhook Automation',
 ]
 
 const STATS = [
@@ -13,142 +30,265 @@ const STATS = [
   { num: '98%', label: 'ML Accuracy' },
 ]
 
-const ROLES = [
-  { label: 'AI Engineer', bg: 'bg-yellow' },
-  { label: 'Forward Deployed', bg: 'bg-green' },
-  { label: 'Full-Stack', bg: 'bg-blue text-cream' },
-  { label: 'Startup Builder', bg: 'bg-pink text-cream' },
-]
+const ROLES = ['AI Engineer', 'Forward Deployed', 'Full-Stack', 'Startup Builder']
+
+const EASE = [0.22, 1, 0.36, 1]
 
 export default function Hero() {
+  const ref = useRef(null)
+  const reduce = useReducedMotion()
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start start', 'end start'],
+  })
+
+  // Content drifts up and fades as the hero scrolls away; the photo moves
+  // slower than the text, which is what reads as depth.
+  const textY = useTransform(scrollYProgress, [0, 1], ['0%', '-22%'])
+  const photoY = useTransform(scrollYProgress, [0, 1], ['0%', '12%'])
+  const fade = useTransform(scrollYProgress, [0, 0.75], [1, 0])
+  const smoothPhotoY = useSpring(photoY, { stiffness: 60, damping: 26 })
+
   return (
-    <section id="hero" className="min-h-screen pt-16 bg-cream relative overflow-hidden">
-      <div className="absolute inset-0 grid-lines pointer-events-none" />
-
-      <div className="absolute top-24 right-6 w-16 h-16 bg-yellow border-2 border-ink shadow-brutal animate-float hidden xl:block" />
-      <div className="absolute top-44 right-28 w-8 h-8 bg-pink border-2 border-ink hidden xl:block" />
-      <div className="absolute bottom-40 left-6 w-12 h-12 bg-blue border-2 border-ink shadow-brutal hidden xl:block" />
-      <div className="absolute bottom-60 left-24 w-6 h-6 bg-green border-2 border-ink hidden xl:block" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-4">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
-
-          {/* LEFT */}
-          <div className="relative z-10 order-1">
-
-            {/* Status badge */}
-            <div className="mb-5 sm:mb-6 flex items-center gap-3 flex-wrap">
-              <span className="section-label flex items-center gap-2">
-                <span className="w-2 h-2 bg-green rounded-full animate-pulse" />
-                AI Engineer · NOISE · Gurugram
+    <section
+      ref={ref}
+      id="hero"
+      className="relative flex min-h-screen flex-col justify-center overflow-hidden pt-28 sm:pt-32"
+    >
+      <div className="mx-auto w-full max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
+        <motion.div
+          style={reduce ? undefined : { y: textY, opacity: fade }}
+          className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-8"
+        >
+          {/* ---------- LEFT ---------- */}
+          <div className="relative z-10">
+            {/* Availability badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.15, ease: EASE }}
+              className="mb-7 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 backdrop-blur-xl"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-g-cyan opacity-70" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-g-cyan" />
               </span>
-            </div>
+              {/* Tighter tracking than the other mono labels: this string is 31
+                  characters and 0.18em pushed the pill past a 390px viewport. */}
+              <span className="text-white/78 font-mono text-[11px] uppercase tracking-[0.13em]">
+                Using AI as an unfair advantage
+              </span>
+            </motion.div>
 
-            {/* Name */}
-            <h1 className="section-heading text-[clamp(1.5rem,8.5vw,6.5rem)] mb-1 leading-[0.92]">
-              SHUBHAM
+            {/* Name — the one big gradient moment on the page */}
+            <h1 className="section-heading mb-6 text-[clamp(2.75rem,9vw,6.75rem)]">
+              <motion.span
+                initial={{ opacity: 0, y: 40, filter: 'blur(14px)' }}
+                animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                transition={{ duration: 1, delay: 0.25, ease: EASE }}
+                className="block text-white"
+              >
+                Shubham
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, y: 40, filter: 'blur(14px)' }}
+                animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                transition={{ duration: 1, delay: 0.38, ease: EASE }}
+                className="gradient-text-animated block"
+              >
+                Sharma
+              </motion.span>
             </h1>
-            <div className="relative inline-block mb-5">
-              <h1 className="section-heading text-[clamp(1.5rem,8.5vw,6.5rem)] relative z-10 px-2 leading-[0.92]">
-                SHARMA
-              </h1>
-              <div className="absolute inset-y-0 left-0 right-0 bg-yellow border-b-4 border-ink -z-0 -skew-x-1 top-1" />
-            </div>
 
-            {/* Role tags */}
-            <div className="flex flex-wrap gap-2 mb-6">
-              {ROLES.map((r) => (
-                <span
-                  key={r.label}
-                  className={`${r.bg} border-2 border-ink font-mono text-[10px] sm:text-xs uppercase tracking-widest px-3 py-1`}
-                >
-                  {r.label}
-                </span>
+            {/* Role chips */}
+            <Stagger className="mb-7 flex flex-wrap gap-2" stagger={0.06} delayChildren={0.55}>
+              {ROLES.map((role) => (
+                <StaggerItem key={role} distance={14}>
+                  <motion.span
+                    whileHover={reduce ? undefined : { y: -2, scale: 1.04 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 22 }}
+                    className="chip cursor-default"
+                  >
+                    {role}
+                  </motion.span>
+                </StaggerItem>
               ))}
-            </div>
+            </Stagger>
 
             {/* Bio */}
-            <p className="font-grotesk text-sm sm:text-base text-ink/75 max-w-[500px] mb-8 sm:mb-10 leading-relaxed">
-              At <strong className="text-ink">NOISE</strong>, I joined as an intern and converted to SDE1 by shipping AI systems that{' '}
-              <strong className="text-ink">replaced entire manual workflows</strong> — B2B warehouse PO automation across Amazon, Flipkart & LFR (Croma, Reliance, Tresor), an AI HR pipeline, brand intelligence monitor, and a 24/7 Instagram AI agent. I own the problem end-to-end: architecture, backend, frontend, deployment.
-            </p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6, ease: EASE }}
+              className="text-white/78 mb-9 max-w-[540px] text-[16px] leading-[1.75]"
+            >
+              At <strong className="text-white/92 font-semibold">NOISE</strong>, I joined as an
+              intern and converted to SDE1 by shipping AI systems that{' '}
+              <strong className="text-white/92 font-semibold">
+                replaced entire manual workflows
+              </strong>{' '}
+              — B2B warehouse PO automation across Amazon, Flipkart &amp; LFR (Croma, Reliance,
+              Tresor), an AI HR pipeline, brand intelligence monitor, and a 24/7 Instagram AI agent.
+              I own the problem end-to-end: architecture, backend, frontend, deployment.
+            </motion.p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-10">
-              <a href="#projects" className="btn-brutal !px-4 sm:!px-6 !text-xs">
-                See What I've Built ↓
-              </a>
-              <a href="#contact" className="btn-brutal-outline !px-4 sm:!px-6 !text-xs">
-                Let's Talk →
-              </a>
-              <a
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.72, ease: EASE }}
+              className="mb-11 flex flex-wrap gap-3"
+            >
+              <MagneticButton href="#projects" className="btn-primary">
+                See What I&apos;ve Built
+                <motion.span
+                  animate={reduce ? undefined : { y: [0, 3, 0] }}
+                  transition={{
+                    duration: 1.6,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                  }}
+                >
+                  ↓
+                </motion.span>
+              </MagneticButton>
+              <MagneticButton href="#contact" className="btn-glass">
+                Let&apos;s Talk →
+              </MagneticButton>
+              <MagneticButton
                 href="https://github.com/shubhamsharma2003"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-brutal-dark !px-4 sm:!px-6 !text-xs"
+                className="btn-ghost"
               >
                 GitHub ↗
-              </a>
-            </div>
+              </MagneticButton>
+            </motion.div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 border-2 border-ink shadow-brutal w-full sm:w-fit max-w-xs sm:max-w-none">
-              {STATS.map((s, i) => (
-                <div
-                  key={s.label}
-                  className={`px-3 sm:px-5 py-3 text-center ${
-                    i % 2 === 0 ? 'border-r-2 border-ink' : ''
-                  } ${i < 2 ? 'border-b-2 sm:border-b-0 border-ink' : ''}`}
-                >
-                  <div className="font-syne font-black text-lg sm:text-xl text-ink">{s.num}</div>
-                  <div className="font-mono text-[9px] sm:text-[10px] text-ink/50 uppercase tracking-wider mt-0.5">
-                    {s.label}
-                  </div>
-                </div>
+            {/* Stats — count up on view */}
+            <Stagger
+              className="grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-4"
+              stagger={0.09}
+              delayChildren={0.85}
+            >
+              {STATS.map((s) => (
+                <StaggerItem key={s.label}>
+                  <motion.div
+                    whileHover={reduce ? undefined : { y: -4 }}
+                    transition={{ type: 'spring', stiffness: 320, damping: 22 }}
+                    className="glass h-full rounded-2xl px-4 py-4"
+                  >
+                    <div className="gradient-text text-2xl font-bold tracking-tight sm:text-[1.7rem]">
+                      <Counter value={s.num} />
+                    </div>
+                    <div className="text-white/66 mt-1 font-mono text-[10.5px] uppercase leading-snug tracking-wider">
+                      {s.label}
+                    </div>
+                  </motion.div>
+                </StaggerItem>
               ))}
-            </div>
+            </Stagger>
           </div>
 
-          {/* RIGHT — Profile photo */}
-          <div className="relative flex justify-center lg:justify-end order-2 mt-10 sm:mt-12 lg:mt-0">
-            <div className="relative pt-6 pb-8 px-6 sm:pt-6 sm:pb-8 sm:px-8">
-              <div className="relative w-48 h-56 sm:w-64 sm:h-72 lg:w-80 lg:h-[420px]">
-                <div className="absolute inset-0 translate-x-4 translate-y-4 sm:translate-x-5 sm:translate-y-5 bg-pink border-2 border-ink" />
-                <div className="absolute inset-0 translate-x-2 translate-y-2 sm:translate-x-3 sm:translate-y-3 bg-yellow border-2 border-ink" />
-                <div className="absolute inset-0 border-2 border-ink overflow-hidden bg-ink z-10 group">
+          {/* ---------- RIGHT — portrait ---------- */}
+          <motion.div
+            style={reduce ? undefined : { y: smoothPhotoY }}
+            initial={{ opacity: 0, scale: 0.92 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.1, delay: 0.3, ease: EASE }}
+            className="relative flex justify-center lg:justify-end"
+          >
+            <div className="relative">
+              {/* Glow behind the frame */}
+              <div
+                aria-hidden="true"
+                className="absolute -inset-10 animate-pulse-glow rounded-full"
+                style={{
+                  background: 'radial-gradient(circle, rgba(155,114,242,0.35) 0%, transparent 65%)',
+                  filter: 'blur(46px)',
+                }}
+              />
+
+              <div className="gradient-border relative w-56 rounded-[2rem] p-[1px] sm:w-72 lg:w-[21rem]">
+                <div className="glass-strong group relative overflow-hidden rounded-[2rem]">
                   <img
                     src={profilePic}
                     alt="Shubham Sharma"
-                    className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                    className="aspect-[4/5] w-full object-cover object-top"
+                    style={{
+                      transition: 'transform .8s cubic-bezier(.22,1,.36,1)',
+                    }}
                   />
-                  <div className="absolute inset-0 bg-yellow/10 group-hover:bg-transparent transition-all duration-700" />
-                </div>
-                <div className="absolute -bottom-5 -left-5 sm:-bottom-4 sm:-left-4 z-20 bg-ink text-cream border-2 border-ink px-2 sm:px-3 py-1.5 sm:py-2 font-mono text-[9px] sm:text-[10px] uppercase tracking-wider shadow-brutal-yellow whitespace-nowrap">
-                  Open to Opportunities
-                </div>
-                <div className="absolute -top-4 -right-4 z-20 bg-green border-2 border-ink px-2 sm:px-3 py-1.5 sm:py-2 font-mono text-[9px] sm:text-[10px] uppercase tracking-wider shadow-brutal">
-                  SDE1 · AI
                 </div>
               </div>
+
+              {/* Floating status cards */}
+              <motion.div
+                initial={{ opacity: 0, x: 24, y: -10 }}
+                animate={{ opacity: 1, x: 0, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.95, ease: EASE }}
+                className="glass-nav absolute -right-3 top-8 rounded-2xl px-3.5 py-2.5 sm:-right-6"
+              >
+                <p className="text-white/66 font-mono text-[10.5px] uppercase tracking-widest">
+                  Role
+                </p>
+                <p className="gradient-text-cool text-xs font-semibold">SDE1 · AI</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -24, y: 10 }}
+                animate={{ opacity: 1, x: 0, y: 0 }}
+                transition={{ duration: 0.7, delay: 1.08, ease: EASE }}
+                className="glass-nav absolute -left-3 bottom-10 rounded-2xl px-3.5 py-2.5 sm:-left-8"
+              >
+                <div className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-g-cyan" />
+                  <p className="text-[11px] font-medium text-white/85">Open to Opportunities</p>
+                </div>
+              </motion.div>
             </div>
+          </motion.div>
+        </motion.div>
+      </div>
+
+      {/* ---------- Ticker ---------- */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.2 }}
+        className="relative border-y border-white/[0.06] bg-white/[0.015] py-4 backdrop-blur-sm"
+      >
+        <div className="mask-fade-x flex select-none whitespace-nowrap">
+          <div className="flex animate-marquee">
+            {[...TICKER_ITEMS, ...TICKER_ITEMS].map((item, i) => (
+              <span key={i} className="flex items-center gap-8 px-8">
+                <span className="text-white/66 font-mono text-[11px] uppercase tracking-[0.15em]">
+                  {item}
+                </span>
+                <span className="h-1 w-1 shrink-0 rounded-full bg-g-violet/50" />
+              </span>
+            ))}
           </div>
-
         </div>
-      </div>
+      </motion.div>
 
-      {/* Ticker */}
-      <div className="border-y-2 border-ink bg-ink overflow-hidden">
-        <div className="flex animate-marquee whitespace-nowrap py-3 select-none">
-          {[...TICKER_ITEMS, ...TICKER_ITEMS].map((item, i) => (
-            <span
-              key={i}
-              className="font-mono text-[11px] uppercase text-cream tracking-[0.2em] px-8 border-r border-cream/20 inline-block"
-            >
-              {item}
-            </span>
-          ))}
-        </div>
-      </div>
+      {/* Scroll hint */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: [0, 1, 1, 0], y: [0, 8, 8, 16] }}
+        transition={{
+          duration: 2.6,
+          repeat: Infinity,
+          delay: 1.6,
+          ease: 'easeInOut',
+        }}
+        className="pointer-events-none absolute bottom-24 left-1/2 hidden -translate-x-1/2 lg:block"
+      >
+        <span className="text-white/58 font-mono text-[11px] uppercase tracking-[0.18em]">
+          Scroll
+        </span>
+      </motion.div>
     </section>
   )
 }
