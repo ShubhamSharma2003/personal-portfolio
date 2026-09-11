@@ -50,7 +50,7 @@ const CERTS = [
 const PARAGRAPHS = [
   <>
     I&apos;m an <strong className="text-white/92 font-semibold">AI-first software engineer</strong>{' '}
-    at <strong className="text-white/92 font-semibold">NOISE</strong> (boAt Lifestyle) — where I
+    at <strong className="text-white/92 font-semibold">NOISE</strong> — where I
     joined as an intern and was converted to SDE1 after shipping production systems that replaced
     entire manual workflows. Since joining full-time, I&apos;ve designed and owned 5+ AI-driven
     platforms end-to-end: a B2B warehouse automation pipeline processing POs from Amazon, Flipkart,
