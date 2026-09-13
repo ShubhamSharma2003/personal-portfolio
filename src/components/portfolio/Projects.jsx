@@ -179,7 +179,7 @@ const PROJECTS = [
   {
     num: '06',
     title: 'Autonomous Bulk Calling Infrastructure',
-    label: 'Freelance · Deployed × 2',
+    label: 'Freelance · Real Estate',
     description:
       'Production-grade AI calling platform handling both outbound campaigns and inbound calls at scale. Dynamically spins up voice AI agents based on real-time call traffic — each agent converses naturally with a real human, understands their requirement, and takes action. Multi-tenant with configurable personas per business vertical (real estate, dental). Fallback model switching ensures 100% uptime. Self-hosted on VPS with a remote control dashboard. Already live at two companies.',
     flow: [
@@ -490,7 +490,7 @@ function TechGroups({ groups, compact = false }) {
   )
 }
 
-function ProjectLinks({ links, compact = false }) {
+function ProjectLinks({ links, label, compact = false }) {
   const reduce = useReducedMotion()
   const size = compact ? '!py-1.5 !px-3.5 !text-[11px]' : '!py-2 !px-4 !text-xs'
 
@@ -498,7 +498,7 @@ function ProjectLinks({ links, compact = false }) {
     return (
       <span className="text-white/58 inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest">
         <span className="h-1 w-1 rounded-full bg-white/20" />
-        Private · NOISE Internal
+        {label?.startsWith('NOISE') ? 'Private · NOISE Internal' : 'Private · Client Work'}
       </span>
     )
   }
@@ -604,7 +604,7 @@ function ProjectCard({ proj }) {
           </div>
 
           <div className="mt-auto pt-1">
-            <ProjectLinks links={proj.links} compact />
+            <ProjectLinks links={proj.links} label={proj.label} compact />
           </div>
         </div>
       </div>
@@ -639,7 +639,7 @@ export default function Projects() {
           </Parallax>
           <Reveal direction="left" delay={0.2}>
             <p className="text-white/58 font-mono text-[11px] uppercase leading-relaxed tracking-[0.15em] lg:text-right">
-              Production systems built at NOISE.
+              Production systems at NOISE &amp; for freelance clients.
               <br />
               Real scale. Real automation.
             </p>
